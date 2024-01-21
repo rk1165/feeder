@@ -1,0 +1,23 @@
+{
+  "title": "",
+  "url": "",
+  "description": "",
+  "params": {
+    "item": {
+      "element": "",
+      "class": ""
+    },
+    "link": {
+      "element": "a",
+      "class": ""
+    },
+    "title": {
+      "element": "",
+      "class": ""
+    },
+    "description": {
+      "element": "",
+      "class": ""
+    }
+  }
+}

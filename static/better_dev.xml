@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss version="2.0">
+    <channel>
+        <title>BetterDev Feed</title>
+        <link>https://betterdev.link/</link>
+        <description>RSS Feed To Fetch BetterDev Feed</description>
+        <item>
+            <title>Using AWK and R to parse 25tb</title>
+            <link>https://livefreeordichotomize.com/posts/2019-06-04-using-awk-and-r-to-parse-25tb/index.html</link>
+            <description>Knowing tools like awk, sed helps immensively when need to process text based log file fast.
+                AWK in itself is a whole programing language. Lets follow this journy of bringing the query time and
+                cost down from 8 minutes and $20 to a tenth of a second and less than a penny,
+            </description>
+        </item>
+        <item>
+            <title>How Discord Stores Billions of Messages — Big Surprises in System Design</title>
+            <link>
+                https://interviewnoodle.com/how-discord-stores-billions-of-messages-big-surprises-in-system-design-e48fa07a2665
+            </link>
+            <description>The biggest supprise is they don’t use cache.</description>
+        </item>
+        <item>
+            <title>What is in that .git directory?</title>
+            <link>https://blog.meain.io/2023/what-is-in-dot-git/</link>
+            <description>Well, I think most of you reading this blog use git more or less on a daily basis, but have you
+                ever looked into what is in the .git folder that git creates? Let’s explore it together and understand
+                what is going on in there.
+            </description>
+        </item>
+        <item>
+            <title>An Interactive Intro to CRDTs</title>
+            <link>https://jakelazaroff.com/words/an-interactive-intro-to-crdts/</link>
+            <description>Have you heard about CRDTs and wondered what they are? Maybe you’ve looked into them a bit, but
+                ran into a wall of academic papers and math jargon?
+            </description>
+        </item>
+        <item>
+            <title>Profiling Python and Ruby using eBPF</title>
+            <link>https://www.polarsignals.com/blog/posts/2023/10/04/profiling-python-and-ruby-with-ebpf</link>
+            <description>Dive into the internals of profiling interpreted Python and Ruby code using eBPF</description>
+        </item>
+        <item>
+            <title>BPFAgent: eBPF for Monitoring at DoorDash</title>
+            <link>https://doordash.engineering/2023/08/15/bpfagent-ebpf-for-monitoring-at-doordash/</link>
+            <description>Metrics, logs, and traces provide vital information. But these signals almost entirely rely on
+                application-level instrumentation, which can leave gaps or conflicting semantics across different
+                systems. DoorDash decided to seek potential solutions that could provide a more complete and unified
+                picture of their networking topology
+            </description>
+        </item>
+        <item>
+            <title>Scaling GraphQL with Postgres - Lessons learned from our database timeout issues</title>
+            <link>
+                https://www.cycle.app/blog/scaling-graphql-with-postgres-lessons-learned-from-our-database-timeout-issues
+            </link>
+            <description>Cycle app has a lot of issue about time out db connection. They workaround by run health check
+                more often to auto restart. Wh
+            </description>
+        </item>
+        <item>
+            <title>Five Great Features of the PostgreSQL Partition Manager</title>
+            <link>https://www.crunchydata.com/blog/five-great-features-of-postgres-partition-manager</link>
+            <description>pg_partman is a tool to partition your table into either time based or number based. In this
+                article they discussed 5 important features to help managing large tables in PostgresSQL.
+            </description>
+        </item>
+        <item>
+            <title>Fine-Tuning Mistral7B on Python Code With A Single GPU!</title>
+            <link>
+                https://wandb.ai/byyoung3/ml-news/reports/Fine-Tuning-Mistral7B-on-Python-Code-With-A-Single-GPU---Vmlldzo1NTg0NzY5
+            </link>
+            <description/>
+        </item>
+        <item>
+            <title>Flui Simulation</title>
+            <link>https://kyndinfo.notion.site/Fluid-Simulation-f0516d9d12e245a08ae5c7545ac822dd</link>
+            <description>A step by step notion note of Kynd, explain how to design and implement a fluid simulation.
+                Very detail at every step, together with codepen to run and follow. You will learn a lot follow this
+            </description>
+        </item>
+        <item>
+            <title>Speeding up the JavaScript ecosystem - The barrel file debacle</title>
+            <link>https://marvinh.dev/blog/speeding-up-javascript-ecosystem-part-7/</link>
+            <description>Part 7 of this series about JS performance. In this, Marvinhh discussed why the
+                import-re-export in a index.js, while convenience for consumer cause perfomrnace degrade.
+            </description>
+        </item>
+        <item>
+            <title>mods</title>
+            <link>https://github.com/charmbracelet/mods</link>
+            <description>LLM based AI is really good at interpreting the output of commands and returning the results in
+                CLI friendly text formats like Markdown.
+            </description>
+        </item>
+        <item>
+            <title>paradedb</title>
+            <link>https://github.com/paradedb/paradedb</link>
+            <description>PostgreSQL for Search</description>
+        </item>
+        <item>
+            <title>Viselect</title>
+            <link>https://github.com/Simonwep/selection</link>
+            <description>A high performance and lightweight library to add a visual way of selecting elements, just like
+                on your Desktop. Zero dependencies, super small. Support for major frameworks!
+            </description>
+        </item>
+        <item>
+            <title>ziggy-pydust</title>
+            <link>https://github.com/fulcrum-so/ziggy-pydust</link>
+            <description>A toolkit for building Python extensiions in Zig</description>
+        </item>
+        <item>
+            <title>faststream</title>
+            <link>https://github.com/airtai/faststream</link>
+            <description>simplifies the process of writing producers and consumers for message queues, handling all the
+                parsing, networking and documentation generation automatically.
+            </description>
+        </item>
+        <item>
+            <title>httpx</title>
+            <link>https://gitlab.com/os85/httpx</link>
+            <description>An HTTP client library for ruby that support HTTP/2</description>
+        </item>
+        <item>
+            <title>nokolexbor</title>
+            <link>https://github.com/serpapi/nokolexbor</link>
+            <description>Nokolexbor is a drop-in replacement for Nokogiri. It’s 5.2x faster at parsing HTML and up to
+                997x faster at CSS selectors. Another similar one is Oga but it has been lack of active development
+            </description>
+        </item>
+        <item>
+            <title>evidence</title>
+            <link>https://github.com/evidence-dev/evidence</link>
+            <description>an open source, code-based alternative to drag-and-drop business intelligence tools. You can
+                write markdown, and generate embed chart(through query your warehouse), like traditional BI tools but
+                now can also embed them into markdown.
+            </description>
+        </item>
+        <item>
+            <title>audiomotion</title>
+            <link>https://audiomotion.dev/#/</link>
+            <description>A high-resolution real-time audio spectrum analyzer JavaScript module with no dependencies
+            </description>
+        </item>
+        <item>
+            <title>logster</title>
+            <link>https://github.com/discourse/logster</link>
+            <description>Log viewer UI and framework for rack</description>
+        </item>
+        <item>
+            <title>Chrome-GPT</title>
+            <link>https://github.com/richardyc/Chrome-GPT</link>
+            <description>An experimental AutoGPT agent that interacts with Chrome</description>
+        </item>
+        <item>
+            <title>TRAKTOR</title>
+            <link>https://github.com/ergo70/TRAKTOR</link>
+            <description>Set up true multimaster replication clusters with vanilla PostgreSQL servers.</description>
+        </item>
+        <item>
+            <title>pg_cirrus</title>
+            <link>https://github.com/stormatics/pg_cirrus</link>
+            <description>Set up 3-Node highly available PostgreSQL cluster</description>
+        </item>
+        <item>
+            <title>obligator</title>
+            <link>https://github.com/anderspitman/obligator</link>
+            <description>Simple and opinionated OpenID Connect server designed for self-hoster</description>
+        </item>
+        <item>
+            <title>Caddy Security</title>
+            <link>https://authp.github.io/</link>
+            <description>Auth Portal and Authorize Plugins for Caddy v2</description>
+        </item>
+        <item>
+            <title>payloadcms</title>
+            <link>https://github.com/payloadcms/payload</link>
+            <description>The best way to build a modern backend + admin UI. No black magic, all TypeScript, and fully
+                open-source, Payload is both an app framework and a headless CMS.
+            </description>
+        </item>
+        <item>
+            <title>pgmetrics</title>
+            <link>https://github.com/rapidloop/pgmetrics</link>
+            <description>Collect and display information and stats from a running PostgreSQL server. A must say to have,
+                very easy to install with a single binary. A similar tools but tailor toward Ruby/Rails is PgHero
+            </description>
+        </item>
+    </channel>
+</rss>

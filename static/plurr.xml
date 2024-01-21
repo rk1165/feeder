@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss version="2.0">
+    <channel>
+        <title>Plurr Feed</title>
+        <link>https://plurrrr.com/</link>
+        <description>RSS Feed To Fetch Plurr Feed</description>
+        <item>
+            <title>Nix shell template</title>
+            <link>https://plurrrr.com/archive/2023/07/07.html#nix-shell-template</link>
+            <description/>
+        </item>
+        <item>
+            <title>TIL - IN is not the same as ANY</title>
+            <link>https://plurrrr.com/archive/2023/07/07.html#til---in-is-not-the-same-as-any</link>
+            <description/>
+        </item>
+        <item>
+            <title>Corinna in the Perl Core</title>
+            <link>https://plurrrr.com/archive/2023/07/07.html#corinna-in-the-perl-core</link>
+            <description/>
+        </item>
+        <item>
+            <title>An elegant new orchid is found hiding in plain sight</title>
+            <link>https://plurrrr.com/archive/2023/07/06.html#an-elegant-new-orchid-is-found-hiding-in-plain-sight
+            </link>
+            <description/>
+        </item>
+        <item>
+            <title>Demystifying Text Data with the unstructured Python Library</title>
+            <link>
+                https://plurrrr.com/archive/2023/07/06.html#demystifying-text-data-with-the-unstructured-python-library
+            </link>
+            <description/>
+        </item>
+        <item>
+            <title>Image Upscaling Using Neural Networks</title>
+            <link>https://plurrrr.com/archive/2023/07/06.html#image-upscaling-using-neural-networks</link>
+            <description/>
+        </item>
+        <item>
+            <title>Regex engine internals as a library</title>
+            <link>https://plurrrr.com/archive/2023/07/05.html#regex-engine-internals-as-a-library</link>
+            <description/>
+        </item>
+        <item>
+            <title>Mastering Intermediate Linux Commands for Server Management</title>
+            <link>
+                https://plurrrr.com/archive/2023/07/05.html#mastering-intermediate-linux-commands-for-server-management
+            </link>
+            <description/>
+        </item>
+        <item>
+            <title>Demystifying NixOS: The Basic Flake</title>
+            <link>https://plurrrr.com/archive/2023/07/05.html#demystifying-nixos:-the-basic-flake</link>
+            <description/>
+        </item>
+        <item>
+            <title>Most Tests Should Be Generated</title>
+            <link>https://plurrrr.com/archive/2023/07/04.html#most-tests-should-be-generated</link>
+            <description/>
+        </item>
+        <item>
+            <title>Two Ways to Turbo-Charge tox</title>
+            <link>https://plurrrr.com/archive/2023/07/04.html#two-ways-to-turbo-charge-tox</link>
+            <description/>
+        </item>
+        <item>
+            <title>Using git mailmap when names change</title>
+            <link>https://plurrrr.com/archive/2023/07/04.html#using-git-mailmap-when-names-change</link>
+            <description/>
+        </item>
+        <item>
+            <title>Names should be as short as possible while still being clear</title>
+            <link>
+                https://plurrrr.com/archive/2023/07/03.html#names-should-be-as-short-as-possible-while-still-being-clear
+            </link>
+            <description/>
+        </item>
+        <item>
+            <title>Demystifying Pratt Parsers</title>
+            <link>https://plurrrr.com/archive/2023/07/03.html#demystifying-pratt-parsers</link>
+            <description/>
+        </item>
+        <item>
+            <title>How to think about async/await in Rust</title>
+            <link>https://plurrrr.com/archive/2023/07/03.html#how-to-think-about-async/await-in-rust</link>
+            <description/>
+        </item>
+        <item>
+            <title>Joins 13 Ways</title>
+            <link>https://plurrrr.com/archive/2023/07/03.html#joins-13-ways</link>
+            <description/>
+        </item>
+        <item>
+            <title>You Donât Need __all__</title>
+            <link>https://plurrrr.com/archive/2023/07/02.html#you-don%E2%80%99t-need-__all__</link>
+            <description/>
+        </item>
+        <item>
+            <title>Tree-Structured Concurrency</title>
+            <link>https://plurrrr.com/archive/2023/07/02.html#tree-structured-concurrency</link>
+            <description/>
+        </item>
+        <item>
+            <title>Why I use the Twain web framework</title>
+            <link>https://plurrrr.com/archive/2023/07/02.html#why-i-use-the-twain-web-framework</link>
+            <description/>
+        </item>
+        <item>
+            <title>Cause of Death</title>
+            <link>https://plurrrr.com/archive/2023/07/02.html#cause-of-death</link>
+            <description/>
+        </item>
+        <item>
+            <title>From Potter's Field: Good</title>
+            <link>https://plurrrr.com/archive/2023/07/01.html#from-potter's-field:-good</link>
+            <description/>
+        </item>
+        <item>
+            <title>My git worfklow</title>
+            <link>https://plurrrr.com/archive/2023/07/01.html#my-git-worfklow</link>
+            <description/>
+        </item>
+        <item>
+            <title>Adventures in building a Go container with Nix</title>
+            <link>https://plurrrr.com/archive/2023/07/01.html#adventures-in-building-a-go-container-with-nix</link>
+            <description/>
+        </item>
+        <item>
+            <title>For Python packages, file structure != API</title>
+            <link>https://plurrrr.com/archive/2023/06/30.html#for-python-packages,-file-structure-!=-api</link>
+            <description/>
+        </item>
+        <item>
+            <title>Static electricity attracts ticks to hosts</title>
+            <link>https://plurrrr.com/archive/2023/06/30.html#static-electricity-attracts-ticks-to-hosts</link>
+            <description/>
+        </item>
+        <item>
+            <title>The Python GIL: Past, Present, and Future</title>
+            <link>https://plurrrr.com/archive/2023/06/30.html#the-python-gil:-past,-present,-and-future</link>
+            <description/>
+        </item>
+        <item>
+            <title>Automating Command Execution Across All Tmux Panes</title>
+            <link>https://plurrrr.com/archive/2023/06/30.html#automating-command-execution-across-all-tmux-panes</link>
+            <description/>
+        </item>
+        <item>
+            <title>NixOS and my Descent into Insanity</title>
+            <link>https://plurrrr.com/archive/2023/06/29.html#nixos-and-my-descent-into-insanity</link>
+            <description/>
+        </item>
+        <item>
+            <title>CLI tools hidden in the Python standard library</title>
+            <link>https://plurrrr.com/archive/2023/06/29.html#cli-tools-hidden-in-the-python-standard-library</link>
+            <description/>
+        </item>
+        <item>
+            <title>Practical Procedural Macros</title>
+            <link>https://plurrrr.com/archive/2023/06/29.html#practical-procedural-macros</link>
+            <description/>
+        </item>
+        <item>
+            <title>Rust fact vs. fiction: 5 Insights from Google's Rust journey</title>
+            <link>
+                https://plurrrr.com/archive/2023/06/28.html#rust-fact-vs.-fiction:-5-insights-from-google's-rust-journey
+            </link>
+            <description/>
+        </item>
+        <item>
+            <title>FreeBSD Jails Containers</title>
+            <link>https://plurrrr.com/archive/2023/06/28.html#freebsd-jails-containers</link>
+            <description/>
+        </item>
+        <item>
+            <title>Is ORM still an 'anti pattern'?</title>
+            <link>https://plurrrr.com/archive/2023/06/28.html#is-orm-still-an-'anti-pattern'?</link>
+            <description/>
+        </item>
+        <item>
+            <title>When NumPy is too slow</title>
+            <link>https://plurrrr.com/archive/2023/06/28.html#when-numpy-is-too-slow</link>
+            <description/>
+        </item>
+        <item>
+            <title>Authlib: Python Authentication</title>
+            <link>https://plurrrr.com/archive/2023/06/27.html#authlib:-python-authentication</link>
+            <description/>
+        </item>
+        <item>
+            <title>The self-supervised learning cookbook</title>
+            <link>https://plurrrr.com/archive/2023/06/27.html#the-self-supervised-learning-cookbook</link>
+            <description/>
+        </item>
+        <item>
+            <title>Welcome to Codon</title>
+            <link>https://plurrrr.com/archive/2023/06/27.html#welcome-to-codon</link>
+            <description/>
+        </item>
+        <item>
+            <title>Advanced macOS Command-Line Tools</title>
+            <link>https://plurrrr.com/archive/2023/06/27.html#advanced-macos-command-line-tools</link>
+            <description/>
+        </item>
+        <item>
+            <title>From Potter's Field</title>
+            <link>https://plurrrr.com/archive/2023/06/26.html#from-potter's-field</link>
+            <description/>
+        </item>
+        <item>
+            <title>An Introduction to Parser Combinators</title>
+            <link>https://plurrrr.com/archive/2023/06/26.html#an-introduction-to-parser-combinators</link>
+            <description/>
+        </item>
+        <item>
+            <title>Gitflow and GitHub Flow compared: Which one is better?</title>
+            <link>https://plurrrr.com/archive/2023/06/26.html#gitflow-and-github-flow-compared:-which-one-is-better?
+            </link>
+            <description/>
+        </item>
+        <item>
+            <title>Raku is pretty damn Cool</title>
+            <link>https://plurrrr.com/archive/2023/06/25.html#raku-is-pretty-damn-cool</link>
+            <description/>
+        </item>
+        <item>
+            <title>What is SKIP LOCKED for in PostgreSQL 9.5?</title>
+            <link>https://plurrrr.com/archive/2023/06/25.html#what-is-skip-locked-for-in-postgresql-9.5?</link>
+            <description/>
+        </item>
+        <item>
+            <title>Completely purge files from a git repository</title>
+            <link>https://plurrrr.com/archive/2023/06/25.html#completely-purge-files-from-a-git-repository</link>
+            <description/>
+        </item>
+        <item>
+            <title>The Body Farm: Good</title>
+            <link>https://plurrrr.com/archive/2023/06/24.html#the-body-farm:-good</link>
+            <description/>
+        </item>
+        <item>
+            <title>CSS only dark mode without JS</title>
+            <link>https://plurrrr.com/archive/2023/06/24.html#css-only-dark-mode-without-js</link>
+            <description/>
+        </item>
+        <item>
+            <title>Big O Notation: A Simple Explanation With Examples</title>
+            <link>https://plurrrr.com/archive/2023/06/24.html#big-o-notation:-a-simple-explanation-with-examples</link>
+            <description/>
+        </item>
+        <item>
+            <title>Clearing up some misconceptions about Passkeys</title>
+            <link>https://plurrrr.com/archive/2023/06/24.html#clearing-up-some-misconceptions-about-passkeys</link>
+            <description/>
+        </item>
+        <item>
+            <title>The Bubble (2022)</title>
+            <link>https://plurrrr.com/archive/2023/06/24.html#the-bubble-(2022)</link>
+            <description/>
+        </item>
+    </channel>
+</rss>

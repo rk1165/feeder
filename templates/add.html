@@ -1,0 +1,60 @@
+<html lang="en-US">
+<head>
+    <title>Website To Feed</title>
+</head>
+<body>
+<form action="{{ url_for('add') }}" method="post">
+    <h3>Enter Feed Related Details</h3>
+    <table>
+        <tr>
+            <td>Feed Title:</td>
+            <td><input name="title" type="text" placeholder="Title of Feed"></td>
+        </tr>
+        <tr>
+            <td>Website URL:</td>
+            <td><input type="text" name="url" placeholder="URL of Website"></td>
+        </tr>
+        <tr>
+            <td>Description:</td>
+            <td><input type="text" name="description" placeholder="Description of Feed"></td>
+        </tr>
+    </table>
+    <h3>Enter the Extraction parameters for identifying feed</h3>
+
+    <table>
+        <tr>
+            <th></th>
+            <th>Element</th>
+            <th>Class</th>
+        </tr>
+        <tr>
+            <td>Item Extractor:</td>
+            <td><input type="text" name="item_el"></td>
+            <td><input type="text" name="item_cl"></td>
+        </tr>
+        <tr>
+            <td>Title Extractor:</td>
+            <td><input type="text" name="title_el"></td>
+            <td><input type="text" name="title_cl"></td>
+        </tr>
+        <tr>
+            <td>Link Extractor:</td>
+            <td><input type="text" name="link_el" value=""></td>
+            <td><input type="text" name="link_cl" value=""></td>
+        </tr>
+        <tr>
+            <td>Description Extractor:</td>
+            <td><input type="text" name="desc_el"></td>
+            <td><input type="text" name="desc_cl"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit"></td>
+            <td></td>
+        </tr>
+    </table>
+
+</form>
+
+</body>
+</html>
