@@ -1,0 +1,11 @@
+__pycache__/
+flask_session/
+instance/
+.idea
+
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.DS_Store
+*.terraform.lock.hcl
+*tfvars.tf

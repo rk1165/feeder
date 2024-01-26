@@ -1,0 +1,82 @@
+<html>
+<head>
+    <title>Feed</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div id="feed">
+    <table>
+        <thead>
+        <tr>
+            <th>Attribute</th>
+            <th>Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>ID</td>
+            <td>{{ feed.id }}</td>
+        </tr>
+        <tr>
+            <td>Title</td>
+            <td>{{ feed.title }}</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>{{ feed.url }}</td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>{{ feed.description }}</td>
+        </tr>
+        <tr>
+            <td>Path</td>
+            <td>{{ feed.path }}</td>
+        </tr>
+        <tr>
+            <td>Item Tag</td>
+            <td>{{ feed.item_tag }}</td>
+        </tr>
+        <tr>
+            <td>Item Class</td>
+            <td>{{ feed.item_class }}</td>
+        </tr>
+        <tr>
+            <td>Title Tag</td>
+            <td>{{ feed.title_tag }}</td>
+        </tr>
+        <tr>
+            <td>Title Class</td>
+            <td>{{ feed.title_class }}</td>
+        </tr>
+        <tr>
+            <td>Link Tag</td>
+            <td>{{ feed.link_tag }}</td>
+        </tr>
+        <tr>
+            <td>Link Class</td>
+            <td>{{ feed.link_class }}</td>
+        </tr>
+        <tr>
+            <td>Description Tag</td>
+            <td>{{ feed.description_tag }}</td>
+        </tr>
+        <tr>
+            <td>Description Class</td>
+            <td>{{ feed.description_class }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<table>
+    <tr>
+        <form method="post" action="/feed/{{ feed.id }}/update">
+            <input type="submit" value="Edit" name="edit"/>
+        </form>
+        <form method="get" action="/feed/{{feed.id }}/delete">
+            <input type="submit" value="Delete" name="delete"/>
+        </form>
+    </tr>
+</table>
+</body>
+</html>

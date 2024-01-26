@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>Feed</title>
+</head>
+<body>
+<form method="post" action="/feed/{{feed.id}}/save">
+    <div id="feed">
+        <table>
+            <tr>
+                <td>Title</td>
+                <td><input name="title" type="text" value="{{feed.title}}"></td>
+            </tr>
+            <tr>
+                <td>URL</td>
+                <td><input name="url" type="text" value="{{ feed.url }}"></td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td><input name="description" type="text" value="{{ feed.description }}"></td>
+            </tr>
+        </table>
+        <br/>
+        <table>
+            <tr>
+                <th></th>
+                <th>Tag</th>
+                <th>Class</th>
+            </tr>
+            <tr>
+                <td>Item Extractor:</td>
+                <td><input name="item_tag" type="text" value="{{ feed.item_tag }}"></td>
+                <td><input name="item_cls" type="text" value="{{ feed.item_class }}"></td>
+            </tr>
+            <tr>
+                <td>Title Extractor:</td>
+                <td><input type="text" name="title_tag" value="{{ feed.title_tag }}"></td>
+                <td><input type="text" name="title_cls" value="{{ feed.title_class }}"></td>
+            </tr>
+            <tr>
+                <td>Link Extractor:</td>
+                <td><input type="text" name="link_tag" value="{{ feed.link_tag }}"></td>
+                <td><input type="text" name="link_cls" value="{{ feed.link_class }}"></td>
+            </tr>
+            <tr>
+                <td>Description Tag</td>
+                <td><input type="text" name="desc_tag" value="{{ feed.description_tag }}"></td>
+                <td><input type="text" name="desc_cls" value="{{ feed.description_class }}"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Save" name="save"/></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</form>
+</body>
+</html>

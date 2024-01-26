@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>Your feeds</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<h3>Your feeds</h3>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>URL</th>
+        <th>Description</th>
+        <th>Path</th>
+        <th>Item Tag</th>
+        <th>Item Class</th>
+        <th>Title Tag</th>
+        <th>Title Class</th>
+        <th>Link Tag</th>
+        <th>Link Class</th>
+        <th>Description Tag</th>
+        <th>Description Class</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% if feeds %}
+    {% for feed in feeds %}
+    <tr>
+        <td><a href="/feed/{{ feed.id }}">{{ feed.id }}</a></td>
+        <td>{{ feed.title }}</td>
+        <td>{{ feed.url }}</td>
+        <td>{{ feed.description }}</td>
+        <td>{{ feed.path }}</td>
+        <td>{{ feed.item_tag }}</td>
+        <td>{{ feed.item_class }}</td>
+        <td>{{ feed.title_tag }}</td>
+        <td>{{ feed.title_class }}</td>
+        <td>{{ feed.link_tag }}</td>
+        <td>{{ feed.link_class }}</td>
+        <td>{{ feed.description_tag }}</td>
+        <td>{{ feed.description_class }}</td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+    </tbody>
+</table>
+
+<form method="get" action="/feed/add">
+    <input type="submit" value="Create New Feed" name="add"/>
+</form>
+</body>
+
+</html>
