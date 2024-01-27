@@ -132,7 +132,7 @@ def save(feed_id):
 
 if __name__ == '__main__':
     scheduler = BackgroundScheduler(daemon=True)
-    scheduler.add_job(update_feed, trigger='interval', seconds=60)
+    scheduler.add_job(update_feed, trigger='interval', seconds=300)
     scheduler.add_job(remove_feed, trigger='interval', days=3)
     scheduler.start()
     atexit.register(lambda: scheduler.shutdown())
