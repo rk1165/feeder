@@ -1,11 +1,20 @@
-<html>
-<head>
-    <title>Feed</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-<div id="feed">
-    <table>
+{% extends "layout.html" %}
+
+{% block title %}
+{{feed.title}}
+{% endblock %}
+
+{% block feeds %}
+<li class="nav-item">
+    <a class="nav-link" href="{{ url_for('feeds') }}">Feeds</a>
+</li>
+{% endblock %}
+
+{% block body %}
+<br/>
+<h4 class="d-flex justify-content-center">{{feed.title}}</h4>
+<div id="feed" class="d-flex justify-content-center">
+    <table class="table table-bordered">
         <thead>
         <tr>
             <th>Attribute</th>
@@ -23,7 +32,7 @@
         </tr>
         <tr>
             <td>URL</td>
-            <td>{{ feed.url }}</td>
+            <td><a href="{{feed.url}}">{{ feed.url }}</a></td>
         </tr>
         <tr>
             <td>Description</td>
@@ -31,7 +40,7 @@
         </tr>
         <tr>
             <td>Path</td>
-            <td>{{ feed.path }}</td>
+            <td><a href="/static/feeds/{{feed.path}}">{{ feed.path }}</a></td>
         </tr>
         <tr>
             <td>Item Tag</td>
@@ -68,15 +77,16 @@
         </tbody>
     </table>
 </div>
-<table>
-    <tr>
-        <form method="post" action="/feed/{{ feed.id }}/update">
-            <input type="submit" value="Edit" name="edit"/>
-        </form>
-        <form method="get" action="/feed/{{feed.id }}/delete">
-            <input type="submit" value="Delete" name="delete"/>
-        </form>
-    </tr>
-</table>
-</body>
-</html>
+<div class="d-flex justify-content-center">
+    <table>
+        <tr>
+            <form method="post" action="/feed/{{ feed.id }}/update">
+                <input type="submit" value="Edit" name="edit"/>
+            </form>
+            <form method="get" action="/feed/{{feed.id }}/delete">
+                <input type="submit" value="Delete" name="delete"/>
+            </form>
+        </tr>
+    </table>
+</div>
+{% endblock %}

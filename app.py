@@ -22,6 +22,11 @@ def home():
     return render_template("index.html")
 
 
+@app.route("/feed/details", methods=["GET"])
+def details():
+    return render_template("howto.html")
+
+
 @app.route("/feed/add", methods=["GET", "POST"])
 def add():
     if request.method == "GET":
@@ -44,7 +49,7 @@ def add():
                     title_tag=ex_params.title_tag, title_cls=ex_params.title_cls,
                     link_tag=ex_params.link_tag, link_cls=ex_params.link_cls,
                     description_tag=ex_params.description_tag, description_cls=ex_params.description_cls)
-
+    app.logger.info(f"Completed creating feed for {form_data.feed_url}")
     db.session.add(new_feed)
     db.session.commit()
     return redirect(url_for('feeds'))
@@ -79,6 +84,7 @@ def feeds():
 def feed(feed_id):
     app.logger.info(f"Getting feed details for {feed_id}")
     obj = Feed.query.filter_by(id=feed_id).first()
+    app.logger.info(f"Got feed {obj}")
     return render_template("feed.html", feed=obj)
 
 
@@ -116,7 +122,7 @@ def save(feed_id):
     obj.link_cls = ex_params.link_cls
     obj.description_tag = ex_params.description_tag
     obj.description_cls = ex_params.description_cls
-    app.logger.info(f"Saving feed {obj} with id {feed_id}")
+    app.logger.info(f"Saving updated feed {obj} with id {feed_id}")
     db.session.commit()
     return redirect(url_for("feed", feed_id=feed_id))
 

@@ -66,6 +66,8 @@ def get_title(item, tag, title_class):
 
 
 def get_link(item, tag, link_class):
+    if item.name == 'a':
+        return item['href'].strip()
     link = ''
     if tag != '':
         link = item.find(tag, class_=link_class)
@@ -107,8 +109,7 @@ def get_feed_items(url, extraction_params):
     soup = scrape_url(url)
     items = list()
     item_elements = soup.find_all(extraction_params.item_tag, class_=extraction_params.item_cls)
-    logging.info(f"Found {len(item_elements)}")
-    # print(f"Found {len(item_elements)} elements")
+    logging.info(f"Found {len(item_elements)} item elements for {url=}")
     root_url = get_root_url(url)
     for item in item_elements:
         title = get_title(item, extraction_params.title_tag, extraction_params.title_cls)

@@ -1,13 +1,15 @@
 import logging
 import sqlite3
 import xml.etree.cElementTree as ET
-
-from feed import ExtractionParameters
-from rss import get_feed_items, create_item_element
-from models import Feed
+from datetime import datetime
 from multiprocessing.pool import ThreadPool
 
+from feed import ExtractionParameters
+from models import Feed
+from rss import get_feed_items, create_item_element
+
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
+
 
 def get_feeds():
     feeds = list()
@@ -33,16 +35,30 @@ def update_feed_path(feed):
     with open(f'./static/feeds/{feed.path}', 'r') as f:
         rss = ET.fromstring(f.read())
         channel = rss.find('channel')
+        # for item in channel.findall('item'):
+        #     if is_item_day_old(item, 6 * 3600):
+        #         logging.info(f"Deleting item {item.find('link').text}")
+        #         channel.remove(item)
+
         guids = get_guid(channel)
-        logging.info(f"Current feed length={len(channel)}")
+        logging.info(f"Current feed length={len(channel)} for path={feed.path}")
         while items:
             new_item = create_item_element(None, items.pop())
             if new_item.find('guid').text not in guids:
                 channel.insert(0, new_item)
-        logging.info(f"Updated feed length={len(channel)}")
+        logging.info(f"Updated feed length={len(channel)} for path={feed.path}")
         with open(f'./static/feeds/{feed.path}', 'w') as writer:
             writer.write(ET.tostring(rss, xml_declaration=True, encoding="utf-8").decode('utf-8'))
             logging.info(f"Finished updating feed with path={feed.path}")
+
+
+def is_item_day_old(item, delta):
+    pub_date = item.find('pubDate').text
+    pub_time = datetime.strptime(pub_date, '%Y-%m-%d %H:%M:%S.%f')
+    time_delta = datetime.now() - pub_time
+    if time_delta.seconds >= delta:
+        return True
+    return False
 
 
 def get_guid(channel):
