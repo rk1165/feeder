@@ -136,4 +136,5 @@ if __name__ == '__main__':
     scheduler.add_job(remove_feed, trigger='interval', days=3)
     scheduler.start()
     atexit.register(lambda: scheduler.shutdown())
-    app.run(port=9999, debug=True)
+    # app.run(port=9999, debug=True)
+    app.run()
