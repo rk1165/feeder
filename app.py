@@ -3,8 +3,9 @@ import xml.etree.cElementTree as ET
 
 from flask import Flask, request, render_template, url_for, redirect
 
+from feed import ExtractionParameters, FormData
 from models import *
-from rss import ExtractionParameters, create_feed, FormData
+from rss import create_feed_file
 
 app = Flask(__name__)
 
@@ -27,12 +28,15 @@ def add():
         return render_template("add.html")
 
     form_data = get_form_data(request.form)
+    app.logger.info(f"Creating new feed with form data:\n{form_data}")
 
-    rss = create_feed(form_data.channel_title, form_data.feed_url,
-                      form_data.channel_desc, form_data.extraction_parameters)
+    rss = create_feed_file(form_data.channel_title, form_data.feed_url,
+                           form_data.channel_desc, form_data.extraction_parameters)
+
     tree = ET.ElementTree(rss)
-    tree.write(f"./static/{form_data.channel_title.lower()}.xml",
+    tree.write(f"./static/feeds/{form_data.channel_title.lower()}.xml",
                encoding="utf-8", xml_declaration=True)
+
     ex_params = form_data.extraction_parameters
     new_feed = Feed(path=f"{form_data.channel_title.lower()}.xml", title=form_data.channel_title,
                     url=form_data.feed_url, description=form_data.channel_desc,
@@ -57,10 +61,8 @@ def get_form_data(form):
     (description_tag, description_cls) = (form.get("desc_tag"), form.get("desc_cls"))
 
     form_data = FormData(channel_title, feed_url, channel_desc)
-    # print("Form data", form_data)
     params = ExtractionParameters(item_tag, item_cls, title_tag, title_cls,
                                   link_tag, link_cls, description_tag, description_cls)
-    # print("params", params)
 
     form_data.extraction_parameters = params
     return form_data
@@ -69,27 +71,31 @@ def get_form_data(form):
 @app.route("/feeds", methods=["GET"])
 def feeds():
     all_feeds = Feed.query.all()
+    app.logger.info(f"No. of feeds: {len(all_feeds)}")
     return render_template("feeds.html", feeds=all_feeds)
 
 
 @app.route("/feed/<int:feed_id>", methods=["GET"])
 def feed(feed_id):
+    app.logger.info(f"Getting feed details for {feed_id}")
     obj = Feed.query.filter_by(id=feed_id).first()
     return render_template("feed.html", feed=obj)
 
 
 @app.route("/feed/<int:feed_id>/delete", methods=["GET"])
 def delete(feed_id):
+    app.logger.info(f"Deleting feed with id {feed_id}")
     obj = Feed.query.filter_by(id=feed_id).one()
     path = obj.path
     db.session.delete(obj)
     db.session.commit()
-    os.remove(f"./static/{path}")
+    os.remove(f"./static/feeds/{path}")
     return redirect(url_for("feeds"))
 
 
 @app.route("/feed/<feed_id>/update", methods=["POST"])
 def edit(feed_id):
+    app.logger.info(f"Editing feed with id {feed_id}")
     obj = Feed.query.filter_by(id=feed_id).one()
     return render_template("update.html", feed=obj)
 
@@ -110,10 +116,9 @@ def save(feed_id):
     obj.link_cls = ex_params.link_cls
     obj.description_tag = ex_params.description_tag
     obj.description_cls = ex_params.description_cls
-    print(obj)
-    # db.session.add(obj)
+    app.logger.info(f"Saving feed {obj} with id {feed_id}")
     db.session.commit()
-    return redirect(url_for("feed", feed_id= feed_id))
+    return redirect(url_for("feed", feed_id=feed_id))
 
 
 app.run(port=9999, debug=True)

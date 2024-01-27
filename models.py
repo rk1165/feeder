@@ -35,7 +35,7 @@ class Feed(db.Model):
         self.description_cls = description_cls
 
     def __repr__(self):
-        return (f"<Feed: {self.id=} {self.title=} {self.url=} {self.description=}"
+        return (f"<Feed: {self.id=} {self.title=} {self.url=} {self.description=}\n"
                 f"({self.item_tag=}, {self.item_cls=})\n"
                 f"({self.title_tag=}, {self.title_cls=})\n"
                 f"({self.link_tag=}, {self.link_cls=})\n"
