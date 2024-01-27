@@ -21,6 +21,7 @@ def get_feeds():
         feed = Feed(title, url, desc, path, item_tag, item_cls, title_tag, title_cls,
                     link_tag, link_cls, description_tag, description_cls)
         feeds.append(feed)
+    logging.info(f"Fetched {len(feeds)} feeds")
     cursor.close()
     conn.close()
     return feeds
@@ -35,11 +36,6 @@ def update_feed_path(feed):
     with open(f'./static/feeds/{feed.path}', 'r') as f:
         rss = ET.fromstring(f.read())
         channel = rss.find('channel')
-        # for item in channel.findall('item'):
-        #     if is_item_day_old(item, 6 * 3600):
-        #         logging.info(f"Deleting item {item.find('link').text}")
-        #         channel.remove(item)
-
         guids = get_guid(channel)
         logging.info(f"Current feed length={len(channel)} for path={feed.path}")
         while items:
@@ -50,6 +46,21 @@ def update_feed_path(feed):
         with open(f'./static/feeds/{feed.path}', 'w') as writer:
             writer.write(ET.tostring(rss, xml_declaration=True, encoding="utf-8").decode('utf-8'))
             logging.info(f"Finished updating feed with path={feed.path}")
+
+
+def remove_old_entries(feed):
+    logging.info(f"Started removing feeds older than 7 days")
+    with open(f'./static/feeds/{feed.path}', 'r') as f:
+        rss = ET.fromstring(f.read())
+        channel = rss.find('channel')
+        logging.info(f"Current feed length={len(channel)} for path={feed.path}")
+        for item in channel.findall('item'):
+            if is_item_day_old(item, 24 * 3 * 3600):
+                channel.remove(item)
+        logging.info(f"After cleaning feed length={len(channel)} for path={feed.path}")
+        with open(f'./static/feeds/{feed.path}', 'w') as writer:
+            writer.write(ET.tostring(rss, xml_declaration=True, encoding="utf-8").decode('utf-8'))
+            logging.info(f"Finished removing old entries for path={feed.path}")
 
 
 def is_item_day_old(item, delta):
@@ -68,7 +79,15 @@ def get_guid(channel):
     return guids
 
 
-if __name__ == '__main__':
+def update_feed():
+    logging.info("Running updater Job")
     all_feeds = get_feeds()
-    with ThreadPool(processes=2) as pool:
+    with ThreadPool(processes=4) as pool:
         pool.map(update_feed_path, all_feeds)
+
+
+def remove_feed():
+    logging.info("Running removal Job")
+    all_feeds = get_feeds()
+    with ThreadPool(processes=4) as pool:
+        pool.map(remove_old_entries, all_feeds)

@@ -15,11 +15,12 @@ add feed
 <div class="d-flex justify-content-center">
     <form action="{{ url_for('add') }}" method="post">
         <br/>
-        <p>Mostly feeds consist of items. Items are similar looking elements on a webpage as can be seen below</p>
+        <p>Mostly, feeds consist of items. Items are similar looking elements on a webpage as seen below</p>
+        <p>For <a href="https://news.ycombinator.com">HackerNews</a></p>
         <img src="../static/img/hn.png" class="img-fluid" alt="hn">
+        <p>For <a href="https://nordictechjobs.com/jobs">Nordic Tech Jobs</a></p>
         <img src="../static/img/ntj.png" class="img-fluid" alt="ntj">
-        <p>For creating your own feeds get the tags and classes which can best identify such elements.<br/>
-            All you need are 3 tags: <br/>
+        <p><br/>For creating your own feeds get the tags and classes which can best identify such elements. All you need are 3 tags: <br/>
         <ol>
             <li>Item : The tag and class which identifies the item.</li>
             <li>Title: The tag and class which has the title in the <strong>item</strong> above</li>

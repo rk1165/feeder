@@ -1,11 +1,14 @@
+import atexit
 import os
 import xml.etree.cElementTree as ET
 
+from apscheduler.schedulers.background import BackgroundScheduler
 from flask import Flask, request, render_template, url_for, redirect
 
 from feed import ExtractionParameters, FormData
 from models import *
 from rss import create_feed_file
+from updater import update_feed, remove_feed
 
 app = Flask(__name__)
 
@@ -22,7 +25,7 @@ def home():
     return render_template("index.html")
 
 
-@app.route("/feed/details", methods=["GET"])
+@app.route("/details", methods=["GET"])
 def details():
     return render_template("howto.html")
 
@@ -127,4 +130,10 @@ def save(feed_id):
     return redirect(url_for("feed", feed_id=feed_id))
 
 
-app.run(port=9999, debug=True)
+if __name__ == '__main__':
+    scheduler = BackgroundScheduler(daemon=True)
+    scheduler.add_job(update_feed, trigger='interval', seconds=60)
+    scheduler.add_job(remove_feed, trigger='interval', days=3)
+    scheduler.start()
+    atexit.register(lambda: scheduler.shutdown())
+    app.run(port=9999, debug=True)
