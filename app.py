@@ -131,11 +131,11 @@ def save(feed_id):
 
 
 scheduler = BackgroundScheduler(daemon=True)
-scheduler.add_job(update_feed, trigger='interval', seconds=300)
+scheduler.add_job(update_feed, trigger='interval', seconds=3600)
 scheduler.add_job(remove_feed, trigger='interval', days=3)
 scheduler.start()
 atexit.register(lambda: scheduler.shutdown())
 
 if __name__ == '__main__':
-    # app.run(port=8000, debug=True)
-    app.run()
+    app.run(port=8000, debug=True)
+    # app.run()

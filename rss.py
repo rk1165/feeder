@@ -12,6 +12,7 @@ from feed import Channel, Item
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
 
+
 def create_feed_file(title, url, description, extraction_params):
     items = get_feed_items(url, extraction_params)  # get feed items from webpage
     channel = Channel(title, url, description)
@@ -44,9 +45,13 @@ def create_item_element(item, item_entry):
 
 
 def scrape_url(url):
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'
+    }
+
     try:
         logging.info(f"Request received for {url=}")
-        response = requests.get(url, timeout=10)
+        response = requests.get(url, timeout=10, headers=headers)
         # print(response.headers)
         # print(response.text)
         soup = BeautifulSoup(response.text, "html.parser")

@@ -8,3 +8,5 @@ flask_session/
 *.DS_Store
 *.terraform.lock.hcl
 *tfvars.tf
+
+build/
