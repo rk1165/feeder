@@ -130,11 +130,12 @@ def save(feed_id):
     return redirect(url_for("feed", feed_id=feed_id))
 
 
+scheduler = BackgroundScheduler(daemon=True)
+scheduler.add_job(update_feed, trigger='interval', seconds=300)
+scheduler.add_job(remove_feed, trigger='interval', days=3)
+scheduler.start()
+atexit.register(lambda: scheduler.shutdown())
+
 if __name__ == '__main__':
-    scheduler = BackgroundScheduler(daemon=True)
-    scheduler.add_job(update_feed, trigger='interval', seconds=300)
-    scheduler.add_job(remove_feed, trigger='interval', days=3)
-    scheduler.start()
-    atexit.register(lambda: scheduler.shutdown())
-    # app.run(port=9999, debug=True)
+    # app.run(port=8000, debug=True)
     app.run()
