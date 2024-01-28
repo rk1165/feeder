@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 
+apt-get update
+apt-get install git
+
+git clone https://github.com/rk1165/feeder/tree/main.git
+
+cd feeder || exit
+python3 -m venv venv
 source .venv/bin/activate
+python3 pip install -r requirements.txt --break-system-packages
 
 sleep 1
 
