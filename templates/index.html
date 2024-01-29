@@ -1,30 +1,30 @@
 {% extends "layout.html" %}
 
 {% block title %}
-Home
+    Home
 {% endblock %}
 
 {% block howto %}
-<li class="nav-item">
-    <a class="nav-link" href="{{ url_for('howto') }}">How To</a>
-</li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('howto') }}">How To</a>
+    </li>
 {% endblock %}
 {% block add %}
-<li class="nav-item">
-    <a class="nav-link" href="{{ url_for('add') }}">Add</a>
-</li>
-{%endblock %}
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('add') }}">Add</a>
+    </li>
+{% endblock %}
 {% block feeds %}
-<li class="nav-item active">
-    <a class="nav-link" href="{{ url_for('feeds') }}">Feeds</a>
-</li>
+    <li class="nav-item active">
+        <a class="nav-link" href="{{ url_for('feeds') }}">Feeds</a>
+    </li>
 {% endblock %}
 
 {% block body %}
-<h3 class="d-flex justify-content-center">Create RSS feed from any website</h3>
-<br/>
-<p>RSS Feed is of the form:</p>
-<textarea class="d-flex justify-content-center" rows="13" cols="60" style="border:none;">
+    <h3 class="d-flex justify-content-center">Create RSS feed from any website</h3>
+    <br/>
+    <p>RSS Feed is of the form:</p>
+    <textarea class="d-flex justify-content-center" rows="13" cols="60" style="border:none;">
 
     <rss version="2.0">
         <channel>
@@ -39,13 +39,13 @@ Home
         </channel>
     </rss>
     </textarea>
-<hr/>
-<p> The meaning of the fields are </p>
-<ol>
-    <li><strong>Title</strong> : Title of the Feed</li>
-    <li><strong>Link</strong> : URL of the Website</li>
-    <li><strong>Description</strong>: Optional description of the Feed</li>
-    <li><strong>Item</strong>: This is the individual Items in the feed which is updated automatically</strong></li>
-</ol>
-<p>To learn more about RSS Feed and how to create one from a website refer <a href="/howto">here</a></p>
+    <hr/>
+    <p> The meaning of the fields are </p>
+    <ol>
+        <li><strong>Title</strong> : Title of the Feed</li>
+        <li><strong>Link</strong> : URL of the Website</li>
+        <li><strong>Description</strong>: Optional description of the Feed</li>
+        <li><strong>Item</strong>: This is the individual Items in the feed which is updated automatically</strong></li>
+    </ol>
+    <p>To learn more about RSS Feed and how to create one from a website refer <a href="/howto">here</a></p>
 {% endblock %}

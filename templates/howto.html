@@ -1,64 +1,66 @@
 {% extends "layout.html" %}
 
 {% block title %}
-add feed
+    add feed
 {% endblock %}
 
 {% block howto %}
-<li class="nav-item">
-    <a class="nav-link" href="#">How To</a>
-</li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">How To</a>
+    </li>
 {% endblock %}
 {% block add %}
-<li class="nav-item">
-    <a class="nav-link" href="{{ url_for('add') }}">Add</a>
-</li>
-{%endblock %}
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('add') }}">Add</a>
+    </li>
+{% endblock %}
 {% block feeds %}
-<li class="nav-item">
-    <a class="nav-link" href="{{ url_for('feeds') }}">Feeds</a>
-</li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('feeds') }}">Feeds</a>
+    </li>
 {% endblock %}
 
 {% block body %}
 
-<div class="d-flex justify-content-center">
-    <form action="{{ url_for('add') }}" method="post">
-        <br/>
-        <p>Mostly, feeds consist of items. Items are similar looking elements on a webpage as seen below</p>
-        <p>For <a href="https://news.ycombinator.com">HackerNews</a></p>
-        <img src="../static/img/hn.png" class="img-fluid" alt="hn">
-        <p><br/>For creating your own feeds get the tags and classes which can best identify such elements. All you need are 3 tags: <br/>
-        <ol>
-            <li>Item : The tag and class which identifies the item.</li>
-            <li>Title: The tag and class which has the title in the <strong>item</strong> above</li>
-            <li>Link : The tag and class with the link (a) in the <strong>item</strong> above</li>
-            <li>Description: The tag and class with description in the <strong>item</strong> above. This is optional</li>
-        </ol>
-        <p>For instance, for the below item </p>
-        <img src="../static/img/item.png" class="img-fluid" alt="item">
-        <p>We have the following extractors</p>
-        <img src="../static/img/extractors.png" class="img-fluid" alt="item">
-        <p>The value of the required parameters would then be</p>
-        <table class="table table-bordered">
-            <tr>
-                <td>Item</td>
-                <td>span</td>
-                <td>titleline</td>
-            </tr>
-            <tr>
-                <td>Title</td>
-                <td>a</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Link</td>
-                <td>a</td>
-                <td></td>
-            </tr>
-        </table>
-        <p><strong>If a class is missing just keep the input field empty</strong></p>
-        <p>To add your first feed please continue <a href="/feed/add">here</a></p>
-    </form>
-</div>
+    <div class="d-flex justify-content-center">
+        <form action="{{ url_for('add') }}" method="post">
+            <br/>
+            <p>Mostly, feeds consist of items. Items are similar looking elements on a webpage as seen below</p>
+            <p>For <a href="https://news.ycombinator.com">HackerNews</a></p>
+            <img src="../static/img/hn.png" class="img-fluid" alt="hn">
+            <p><br/>For creating your own feeds get the tags and classes which can best identify such elements. All you
+                need are 3 tags: <br/>
+            <ol>
+                <li>Item : The tag and class which identifies the item.</li>
+                <li>Title: The tag and class which has the title in the <strong>item</strong> above</li>
+                <li>Link : The tag and class with the link (a) in the <strong>item</strong> above</li>
+                <li>Description: The tag and class with description in the <strong>item</strong> above. This is optional
+                </li>
+            </ol>
+            <p>For instance, for the below item </p>
+            <img src="../static/img/item.png" class="img-fluid" alt="item">
+            <p>We have the following extractors</p>
+            <img src="../static/img/extractors.png" class="img-fluid" alt="item">
+            <p>The value of the required parameters would then be</p>
+            <table class="table table-bordered">
+                <tr>
+                    <td>Item</td>
+                    <td>span</td>
+                    <td>titleline</td>
+                </tr>
+                <tr>
+                    <td>Title</td>
+                    <td>a</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Link</td>
+                    <td>a</td>
+                    <td></td>
+                </tr>
+            </table>
+            <p><strong>If a class is missing just keep the input field empty</strong></p>
+            <p>To add your first feed please continue <a href="/feed/add">here</a></p>
+        </form>
+    </div>
 {% endblock %}

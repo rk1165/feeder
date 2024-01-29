@@ -1,67 +1,65 @@
 {% extends "layout.html" %}
 
 {% block title %}
-Feeds
+    Feeds
 {% endblock %}
 
 {% block howto %}
-<li class="nav-item">
-    <a class="nav-link" href="{{ url_for('howto') }}">How To</a>
-</li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('howto') }}">How To</a>
+    </li>
 {% endblock %}
 {% block add %}
-<li class="nav-item">
-    <a class="nav-link" href="{{ url_for('add') }}">Add</a>
-</li>
-{%endblock %}
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('add') }}">Add</a>
+    </li>
+{% endblock %}
 {% block feeds %}
-<li class="nav-item active">
-    <a class="nav-link" href="#">Feeds</a>
-</li>
+    <li class="nav-item active">
+        <a class="nav-link" href="#">Feeds</a>
+    </li>
 {% endblock %}
 
 {% block body %}
-<br/>
-<h3 class="d-flex justify-content-center">To add a feed to RSS Reader copy the Path link</h3>
+    <br/>
+    <h3 class="d-flex justify-content-center">To add a feed to RSS Reader copy the link in Feed ID Column</h3>
 
-{% with messages = get_flashed_messages(with_categories=true) %}
-{% if messages %}
-{% for category, message in messages %}
-<div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
-    <strong>{{ message }}</strong>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-{% endfor %}
-{% endif %}
-{% endwith %}
-
-<div id="feed" class="d-flex justify-content-center">
-    <table class="table table-bordered">
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>URL</th>
-            <th>Description</th>
-            <th>Path</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% if feeds %}
-        {% for feed in feeds %}
-        <tr>
-            <td><a href="/feed/{{ feed.id }}">{{ feed.id }}</a></td>
-            <td><strong>{{ feed.title }}</strong></td>
-            <td><a href="{{ feed.url }}">{{ feed.url }}</a></td>
-            <td>{{ feed.description }}</td>
-            <td><a href="/static/feeds/{{feed.path}}">{{ feed.path }}</a></td>
-        </tr>
-        {% endfor %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                    <strong>{{ message }}</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
         {% endif %}
-        </tbody>
-    </table>
-</div>
-<form class="d-flex justify-content-center" method="get" action="/feed/add">
-    <input type="submit" value="Create New Feed" name="add"/>
-</form>
+    {% endwith %}
+
+    <div id="feed" class="d-flex justify-content-center">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Feed ID</th>
+                <th>URL</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% if feeds %}
+                {% for feed in feeds %}
+                    <tr>
+                        <td><a href="/feed/{{ feed.id }}">{{ feed.id }}</a></td>
+                        <td><strong>{{ feed.title }}</strong></td>
+                        <td><a href="/static/feeds/{{ feed.name }}">{{ feed.name }}</a></td>
+                        <td><a href="{{ feed.url }}">{{ feed.url }}</a></td>
+                    </tr>
+                {% endfor %}
+            {% endif %}
+            </tbody>
+        </table>
+    </div>
+    <form class="d-flex justify-content-center" method="get" action="/feed/add">
+        <input type="submit" value="Create New Feed" name="add"/>
+    </form>
 {% endblock %}

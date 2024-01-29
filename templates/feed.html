@@ -1,102 +1,102 @@
 {% extends "layout.html" %}
 
 {% block title %}
-{{feed.title}}
+    {{ feed.title }}
 {% endblock %}
 
 {% block howto %}
-<li class="nav-item">
-    <a class="nav-link" href="{{ url_for('howto') }}">How To</a>
-</li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('howto') }}">How To</a>
+    </li>
 {% endblock %}
 {% block add %}
-<li class="nav-item">
-    <a class="nav-link" href="{{ url_for('add') }}">Add</a>
-</li>
-{%endblock %}
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('add') }}">Add</a>
+    </li>
+{% endblock %}
 {% block feeds %}
-<li class="nav-item">
-    <a class="nav-link" href="{{ url_for('feeds') }}">Feeds</a>
-</li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('feeds') }}">Feeds</a>
+    </li>
 {% endblock %}
 
 {% block body %}
-<br/>
-<h4 class="d-flex justify-content-center">{{feed.title}}</h4>
-<div id="feed" class="d-flex justify-content-center">
-    <table class="table table-bordered">
-        <thead>
-        <tr>
-            <th>Attribute</th>
-            <th>Value</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>ID</td>
-            <td>{{ feed.id }}</td>
-        </tr>
-        <tr>
-            <td>Title</td>
-            <td>{{ feed.title }}</td>
-        </tr>
-        <tr>
-            <td>URL</td>
-            <td><a href="{{feed.url}}">{{ feed.url }}</a></td>
-        </tr>
-        <tr>
-            <td>Description</td>
-            <td>{{ feed.description }}</td>
-        </tr>
-        <tr>
-            <td>Path</td>
-            <td><a href="/static/feeds/{{feed.path}}">{{ feed.path }}</a></td>
-        </tr>
-        <tr>
-            <td>Item Tag</td>
-            <td>{{ feed.item_tag }}</td>
-        </tr>
-        <tr>
-            <td>Item Class</td>
-            <td>{{ feed.item_cls }}</td>
-        </tr>
-        <tr>
-            <td>Title Tag</td>
-            <td>{{ feed.title_tag }}</td>
-        </tr>
-        <tr>
-            <td>Title Class</td>
-            <td>{{ feed.title_cls }}</td>
-        </tr>
-        <tr>
-            <td>Link Tag</td>
-            <td>{{ feed.link_tag }}</td>
-        </tr>
-        <tr>
-            <td>Link Class</td>
-            <td>{{ feed.link_cls }}</td>
-        </tr>
-        <tr>
-            <td>Description Tag</td>
-            <td>{{ feed.description_tag }}</td>
-        </tr>
-        <tr>
-            <td>Description Class</td>
-            <td>{{ feed.description_cls }}</td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-<div class="d-flex justify-content-center">
-    <table>
-        <tr>
-            <form method="post" action="/feed/{{ feed.id }}/update">
-                <input type="submit" value="Edit" name="edit"/>
-            </form>
-            <form method="get" action="/feed/{{feed.id }}/delete">
-                <input type="submit" value="Delete" name="delete"/>
-            </form>
-        </tr>
-    </table>
-</div>
+    <br/>
+    <h4 class="d-flex justify-content-center">{{ feed.title }}</h4>
+    <div id="feed" class="d-flex justify-content-center">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Attribute</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>ID</td>
+                <td>{{ feed.id }}</td>
+            </tr>
+            <tr>
+                <td>Title</td>
+                <td>{{ feed.title }}</td>
+            </tr>
+            <tr>
+                <td>Feed name</td>
+                <td><a href="/static/feeds/{{ feed.name }}.xml">{{ feed.name }}</a></td>
+            </tr>
+            <tr>
+                <td>URL</td>
+                <td><a href="{{ feed.url }}">{{ feed.url }}</a></td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td>{{ feed.description }}</td>
+            </tr>
+            <tr>
+                <td>Item Tag</td>
+                <td>{{ feed.item_tag }}</td>
+            </tr>
+            <tr>
+                <td>Item Class</td>
+                <td>{{ feed.item_cls }}</td>
+            </tr>
+            <tr>
+                <td>Title Tag</td>
+                <td>{{ feed.title_tag }}</td>
+            </tr>
+            <tr>
+                <td>Title Class</td>
+                <td>{{ feed.title_cls }}</td>
+            </tr>
+            <tr>
+                <td>Link Tag</td>
+                <td>{{ feed.link_tag }}</td>
+            </tr>
+            <tr>
+                <td>Link Class</td>
+                <td>{{ feed.link_cls }}</td>
+            </tr>
+            <tr>
+                <td>Description Tag</td>
+                <td>{{ feed.description_tag }}</td>
+            </tr>
+            <tr>
+                <td>Description Class</td>
+                <td>{{ feed.description_cls }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="d-flex justify-content-center">
+        <table>
+            <tr>
+                <form method="post" action="/feed/{{ feed.id }}/update">
+                    <input type="submit" value="Edit" name="edit"/>
+                </form>
+                <form method="get" action="/feed/{{ feed.id }}/delete">
+                    <input type="submit" value="Delete" name="delete"/>
+                </form>
+            </tr>
+        </table>
+    </div>
 {% endblock %}

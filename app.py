@@ -5,10 +5,10 @@ import xml.etree.cElementTree as ET
 from apscheduler.schedulers.background import BackgroundScheduler
 from flask import Flask, request, render_template, url_for, redirect, flash
 
-from feed import ExtractionParameters, FormData
+from data import ExtractionParameters, FormData
 from models import *
 from rss import create_feed_file
-from updater import update_feed, remove_feed
+from updater import update_feeds, clean_feeds
 
 app = Flask(__name__)
 
@@ -47,11 +47,11 @@ def add():
         return redirect(url_for("feeds"))
 
     tree = ET.ElementTree(rss)
-    tree.write(f"./static/feeds/{form_data.channel_title.lower()}.xml",
+    tree.write(f"./static/feeds/{form_data.name.lower()}.xml",
                encoding="utf-8", xml_declaration=True)
 
     ex_params = form_data.extraction_parameters
-    new_feed = Feed(path=f"{form_data.channel_title.lower()}.xml", title=form_data.channel_title,
+    new_feed = Feed(name=f"{form_data.name.lower()}.xml", title=form_data.channel_title,
                     url=form_data.feed_url, description=form_data.channel_desc,
                     item_tag=ex_params.item_tag, item_cls=ex_params.item_cls,
                     title_tag=ex_params.title_tag, title_cls=ex_params.title_cls,
@@ -66,6 +66,7 @@ def add():
 
 def get_form_data(form):
     channel_title = form.get("title")
+    name = form.get("feed_name")
     feed_url = form.get("url")
     channel_desc = form.get("description")
 
@@ -74,7 +75,7 @@ def get_form_data(form):
     (link_tag, link_cls) = (form.get("link_tag"), form.get("link_cls"))
     (description_tag, description_cls) = (form.get("desc_tag"), form.get("desc_cls"))
 
-    form_data = FormData(channel_title, feed_url, channel_desc)
+    form_data = FormData(channel_title, name, feed_url, channel_desc)
     params = ExtractionParameters(item_tag, item_cls, title_tag, title_cls,
                                   link_tag, link_cls, description_tag, description_cls)
 
@@ -101,7 +102,7 @@ def feed(feed_id):
 def delete(feed_id):
     app.logger.info(f"Deleting feed with id {feed_id}")
     obj = Feed.query.filter_by(id=feed_id).one()
-    path = obj.path
+    path = obj.name
     db.session.delete(obj)
     db.session.commit()
     os.remove(f"./static/feeds/{path}")
@@ -120,6 +121,7 @@ def save(feed_id):
     obj = Feed.query.filter_by(id=feed_id).first()
     form_data = get_form_data(request.form)
     obj.title = form_data.channel_title
+    obj.name = form_data.name
     obj.url = form_data.feed_url
     obj.description = form_data.channel_desc
     ex_params = form_data.extraction_parameters
@@ -137,8 +139,8 @@ def save(feed_id):
 
 
 scheduler = BackgroundScheduler(daemon=True)
-scheduler.add_job(update_feed, trigger='interval', seconds=3600)
-scheduler.add_job(remove_feed, trigger='interval', days=3)
+scheduler.add_job(update_feeds, trigger='interval', seconds=60)
+scheduler.add_job(clean_feeds, trigger='interval', days=3)
 scheduler.start()
 atexit.register(lambda: scheduler.shutdown())
 

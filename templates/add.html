@@ -1,81 +1,86 @@
 {% extends "layout.html" %}
 
 {% block title %}
-add feed
+    add feed
 {% endblock %}
 
 {% block howto %}
-<li class="nav-item">
-    <a class="nav-link" href="{{ url_for('howto') }}">How To</a>
-</li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('howto') }}">How To</a>
+    </li>
 {% endblock %}
 {% block add %}
-<li class="nav-item">
-    <a class="nav-link" href="#">Add</a>
-</li>
-{%endblock %}
+    <li class="nav-item">
+        <a class="nav-link" href="#">Add</a>
+    </li>
+{% endblock %}
 {% block feeds %}
-<li class="nav-item">
-    <a class="nav-link" href="{{ url_for('feeds') }}">Feeds</a>
-</li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('feeds') }}">Feeds</a>
+    </li>
 {% endblock %}
 
 {% block body %}
 
-<div class="d-flex justify-content-center">
-    <form action="{{ url_for('add') }}" method="post">
-        <br/>
-        <h3>Enter Feed Related Details</h3>
-        <table>
-            <tr>
-                <td>Feed Title:</td>
-                <td><input style="width: 300px" name="title" type="text" placeholder="Title of Feed"></td>
-            </tr>
-            <tr>
-                <td>Website URL:</td>
-                <td><input style="width: 300px" type="text" name="url" placeholder="URL of Website"></td>
-            </tr>
-            <tr>
-                <td>Description:</td>
-                <td><input style="width: 300px" type="text" name="description" placeholder="Description of Feed"></td>
-            </tr>
-        </table>
-        <br/>
-        <h3>Enter the Extraction parameters for identifying feed</h3>
+    <div class="d-flex justify-content-center">
+        <form action="{{ url_for('add') }}" method="post">
+            <br/>
+            <h3>Enter Feed Related Details</h3>
+            <table>
+                <tr>
+                    <td>Feed Title:</td>
+                    <td><input style="width: 300px" name="title" type="text" placeholder="Title of Feed"></td>
+                </tr>
+                <tr>
+                    <td>Feed Name:</td>
+                    <td><input style="width: 300px" name="feed_name" type="text" placeholder="Unique name for feed"></td>
+                </tr>
+                <tr>
+                    <td>Website URL:</td>
+                    <td><input style="width: 300px" type="text" name="url" placeholder="URL of Website"></td>
+                </tr>
+                <tr>
+                    <td>Description:</td>
+                    <td><input style="width: 300px" type="text" name="description" placeholder="Description of Feed">
+                    </td>
+                </tr>
+            </table>
+            <br/>
+            <h3>Enter the Extraction parameters for identifying feed</h3>
 
-        <table>
-            <tr>
-                <th></th>
-                <th>Tag</th>
-                <th>Class</th>
-            </tr>
-            <tr>
-                <td>Item Extractor:</td>
-                <td><input type="text" name="item_tag"></td>
-                <td><input type="text" name="item_cls"></td>
-            </tr>
-            <tr>
-                <td>Title Extractor:</td>
-                <td><input type="text" name="title_tag"></td>
-                <td><input type="text" name="title_cls"></td>
-            </tr>
-            <tr>
-                <td>Link Extractor:</td>
-                <td><input type="text" name="link_tag" value=""></td>
-                <td><input type="text" name="link_cls" value=""></td>
-            </tr>
-            <tr>
-                <td>Description Extractor:</td>
-                <td><input type="text" name="desc_tag"></td>
-                <td><input type="text" name="desc_cls"></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="submit"></td>
-                <td></td>
-            </tr>
-        </table>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Tag</th>
+                    <th>Class</th>
+                </tr>
+                <tr>
+                    <td>Item Extractor:</td>
+                    <td><input type="text" name="item_tag"></td>
+                    <td><input type="text" name="item_cls"></td>
+                </tr>
+                <tr>
+                    <td>Title Extractor:</td>
+                    <td><input type="text" name="title_tag"></td>
+                    <td><input type="text" name="title_cls"></td>
+                </tr>
+                <tr>
+                    <td>Link Extractor:</td>
+                    <td><input type="text" name="link_tag" value=""></td>
+                    <td><input type="text" name="link_cls" value=""></td>
+                </tr>
+                <tr>
+                    <td>Description Extractor:</td>
+                    <td><input type="text" name="desc_tag"></td>
+                    <td><input type="text" name="desc_cls"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit"></td>
+                    <td></td>
+                </tr>
+            </table>
 
-    </form>
-</div>
+        </form>
+    </div>
 {% endblock %}

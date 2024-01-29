@@ -35,12 +35,14 @@ class ExtractionParameters:
 
 
 class FormData:
-    def __init__(self, channel_title, feed_url, channel_desc):
+    def __init__(self, channel_title, name, feed_url, channel_desc):
         self.channel_title = channel_title
+        self.name = name
         self.feed_url = feed_url
         self.channel_desc = channel_desc
         self.extraction_parameters = None
 
     def __str__(self):
-        return (f"[title={self.channel_title} url={self.feed_url} description={self.channel_desc}]\n"
+        return (f"[title={self.channel_title} name={self.name} "
+                f"url={self.feed_url} description={self.channel_desc}]\n"
                 f"{self.extraction_parameters}")

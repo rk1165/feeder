@@ -3,7 +3,7 @@ import xml.etree.cElementTree as ET
 
 import selenium.webdriver as webdriver
 
-from feed import ExtractionParameters
+from data import ExtractionParameters
 from rss import create_feed_file
 
 URL = 'https://careers.scaleway.com/#anchor-joblist'
@@ -37,4 +37,4 @@ def get_html(url):
 
 # print(get_html(URL))
 
-generate_feed_file(URL)
+# generate_feed_file(URL)

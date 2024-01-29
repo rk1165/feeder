@@ -9,7 +9,7 @@ import requests
 import selenium.webdriver as webdriver
 from bs4 import BeautifulSoup
 
-from feed import Channel, Item
+from data import Channel, Item
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
 
