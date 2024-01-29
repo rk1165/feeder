@@ -1,6 +1,0 @@
-README.md
-setup.py
-feeder.egg-info/PKG-INFO
-feeder.egg-info/SOURCES.txt
-feeder.egg-info/dependency_links.txt
-feeder.egg-info/top_level.txt

@@ -3,7 +3,7 @@ import os
 import xml.etree.cElementTree as ET
 
 from apscheduler.schedulers.background import BackgroundScheduler
-from flask import Flask, request, render_template, url_for, redirect
+from flask import Flask, request, render_template, url_for, redirect, flash
 
 from feed import ExtractionParameters, FormData
 from models import *
@@ -14,6 +14,7 @@ app = Flask(__name__)
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///feeds.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+app.config["SECRET_KEY"] = "secret"
 
 db.init_app(app)
 with app.app_context():
@@ -25,8 +26,8 @@ def home():
     return render_template("index.html")
 
 
-@app.route("/details", methods=["GET"])
-def details():
+@app.route("/howto", methods=["GET"])
+def howto():
     return render_template("howto.html")
 
 
@@ -42,7 +43,8 @@ def add():
                            form_data.channel_desc, form_data.extraction_parameters)
     if rss.find('channel').find('item') is None:
         message = "No items were found. Please check if the extraction parameters can be modified."
-        return redirect(url_for("feeds", message=message))
+        flash(message, "warning")
+        return redirect(url_for("feeds"))
 
     tree = ET.ElementTree(rss)
     tree.write(f"./static/feeds/{form_data.channel_title.lower()}.xml",
@@ -58,7 +60,8 @@ def add():
     app.logger.info(f"Completed creating feed for {form_data.feed_url}")
     db.session.add(new_feed)
     db.session.commit()
-    return redirect(url_for('feeds', message=f"Added feed for {form_data.feed_url} successfully"))
+    flash(f"Successfully created feed for {form_data.feed_url}", category="success")
+    return redirect(url_for('feeds'))
 
 
 def get_form_data(form):
@@ -79,12 +82,11 @@ def get_form_data(form):
     return form_data
 
 
-@app.route("/feeds", methods=["GET"], defaults={"message":None})
-@app.route("/feeds/<message>", methods=["GET"])
-def feeds(message):
+@app.route("/feeds", methods=["GET"])
+def feeds():
     all_feeds = Feed.query.all()
     app.logger.info(f"No. of feeds: {len(all_feeds)}")
-    return render_template("feeds.html", feeds=all_feeds, message=message)
+    return render_template("feeds.html", feeds=all_feeds)
 
 
 @app.route("/feed/<int:feed_id>", methods=["GET"])

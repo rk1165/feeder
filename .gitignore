@@ -10,3 +10,4 @@ flask_session/
 *tfvars.tf
 
 build/
+.venv/

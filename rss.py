@@ -6,8 +6,8 @@ from datetime import datetime
 from urllib.parse import urlparse
 
 import requests
+import selenium.webdriver as webdriver
 from bs4 import BeautifulSoup
-from scrape_js import get_html
 
 from feed import Channel, Item
 
@@ -47,7 +47,8 @@ def create_item_element(item, item_entry):
 
 def scrape_url(url):
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko)'
+                      ' Chrome/39.0.2171.95 Safari/537.36'
     }
 
     try:
@@ -108,6 +109,18 @@ def valid_link(link):
     if domain == '' or scheme == '':
         return False
     return True
+
+
+def get_html(url):
+    options = webdriver.ChromeOptions()
+    options.add_argument('headless')
+    driver = webdriver.Chrome(options=options)
+    logging.info(f"Fetching html content for dynamic website {url}")
+    driver.get(url)
+    driver.implicitly_wait(1)
+    content = driver.page_source
+    driver.quit()
+    return content
 
 
 # Item is the encapsulation of a RSS Feed Item : It has title, link, description (if present)

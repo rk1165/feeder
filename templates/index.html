@@ -4,6 +4,22 @@
 Home
 {% endblock %}
 
+{% block howto %}
+<li class="nav-item">
+    <a class="nav-link" href="{{ url_for('howto') }}">How To</a>
+</li>
+{% endblock %}
+{% block add %}
+<li class="nav-item">
+    <a class="nav-link" href="{{ url_for('add') }}">Add</a>
+</li>
+{%endblock %}
+{% block feeds %}
+<li class="nav-item active">
+    <a class="nav-link" href="{{ url_for('feeds') }}">Feeds</a>
+</li>
+{% endblock %}
+
 {% block body %}
 <h3 class="d-flex justify-content-center">Create RSS feed from any website</h3>
 <br/>
@@ -31,5 +47,5 @@ Home
     <li><strong>Description</strong>: Optional description of the Feed</li>
     <li><strong>Item</strong>: This is the individual Items in the feed which is updated automatically</strong></li>
 </ol>
-<p>To learn more about RSS Feed and how to create one from a website refer <a href="/details">here</a></p>
+<p>To learn more about RSS Feed and how to create one from a website refer <a href="/howto">here</a></p>
 {% endblock %}
