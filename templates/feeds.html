@@ -36,10 +36,19 @@ Feeds
         </tr>
         {% endfor %}
         {% endif %}
+
+
         </tbody>
     </table>
 
 </div>
+{% if message %}
+<div class="row justify-content-center">
+    <div class="alert" role="alert">
+        {{ message }}
+    </div>
+</div>
+{% endif %}
 <form class="d-flex justify-content-center" method="get" action="/feed/add">
     <input type="submit" value="Create New Feed" name="add"/>
 </form>

@@ -7,6 +7,7 @@ from urllib.parse import urlparse
 
 import requests
 from bs4 import BeautifulSoup
+from scrape_js import get_html
 
 from feed import Channel, Item
 
@@ -114,7 +115,13 @@ def get_feed_items(url, extraction_params):
     soup = scrape_url(url)
     items = list()
     item_elements = soup.find_all(extraction_params.item_tag, class_=extraction_params.item_cls)
+    # if no items found ... chances are website is dynamically generated use selenium
+    if len(item_elements) == 0:
+        html = get_html(url)
+        soup = BeautifulSoup(html, 'html.parser')
+        item_elements = soup.find_all(extraction_params.item_tag, class_=extraction_params.item_cls)
     logging.info(f"Found {len(item_elements)} item elements for {url=}")
+    # print(item_elements)
     root_url = get_root_url(url)
     for item in item_elements:
         title = get_title(item, extraction_params.title_tag, extraction_params.title_cls)

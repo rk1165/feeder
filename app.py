@@ -40,6 +40,9 @@ def add():
 
     rss = create_feed_file(form_data.channel_title, form_data.feed_url,
                            form_data.channel_desc, form_data.extraction_parameters)
+    if rss.find('channel').find('item') is None:
+        message = "No items were found. Please check if the extraction parameters can be modified."
+        return redirect(url_for("feeds", message=message))
 
     tree = ET.ElementTree(rss)
     tree.write(f"./static/feeds/{form_data.channel_title.lower()}.xml",
@@ -55,7 +58,7 @@ def add():
     app.logger.info(f"Completed creating feed for {form_data.feed_url}")
     db.session.add(new_feed)
     db.session.commit()
-    return redirect(url_for('feeds'))
+    return redirect(url_for('feeds', message=f"Added feed for {form_data.feed_url} successfully"))
 
 
 def get_form_data(form):
@@ -76,11 +79,12 @@ def get_form_data(form):
     return form_data
 
 
-@app.route("/feeds", methods=["GET"])
-def feeds():
+@app.route("/feeds", methods=["GET"], defaults={"message":None})
+@app.route("/feeds/<message>", methods=["GET"])
+def feeds(message):
     all_feeds = Feed.query.all()
     app.logger.info(f"No. of feeds: {len(all_feeds)}")
-    return render_template("feeds.html", feeds=all_feeds)
+    return render_template("feeds.html", feeds=all_feeds, message=message)
 
 
 @app.route("/feed/<int:feed_id>", methods=["GET"])
