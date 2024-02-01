@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss version="2.0"><channel><title>Plurrrrr</title><link>https://plurrrr.com/</link><description>Plurrr feed</description><item><title>Nix shell template</title><link>https://plurrrr.com/archive/2023/07/07.html#nix-shell-template</link><description>Nix shells are the best tool for creating software development
+environments right now. This article provides a template to get you
+started with Nix shells from scratch, and explains how to add common
+features.</description><pubDate>2024-01-29 16:49:28.800848</pubDate><guid isPermaLink="false">YuGM22LpwI_hnyS7zWteuowrm3etiOJ6Z_3OLoS7dq8=</guid></item><item><title>TIL - IN is not the same as ANY</title><link>https://plurrrr.com/archive/2023/07/07.html#til---in-is-not-the-same-as-any</link><description>Not exactly from today, rather from a month or two ago, but still on
+my ânoteworthy listâ. So after a remarkably long quiet period of no
+surprises (Postgres doesnât generally surprise one badly), I managed
+to learn something controversial - a thing considered generally
+good, using ANY instead of IN-list in this case, can have downsides
+nevertheless!</description><pubDate>2024-01-29 16:49:28.800908</pubDate><guid isPermaLink="false">zuFT3mK56WPLUQp-YzG13DAGF7kd-UPtVtDCzvQ6-IM=</guid></item><item><title>Corinna in the Perl Core</title><link>https://plurrrr.com/archive/2023/07/07.html#corinna-in-the-perl-core</link><description>Itâs been a years-long, painful process, but with the release of
+Perl
+v.5.38,0,
+the first bits of Corinna have been added to the Perl core. For
+those who have not been following along, Corinna is a project to add
+a new object system to the Perl core. Note that itâs not taking
+anything away from Perl; itâs adding a core object system for better
+memory consumption, performance, and elegance.</description><pubDate>2024-01-29 16:49:28.800916</pubDate><guid isPermaLink="false">yCW2FKbPmUoLhJPamEzuRlTrXNIkHXuDXQuhbmenofk=</guid></item><item><title>An elegant new orchid is found hiding in plain sight</title><link>https://plurrrr.com/archive/2023/07/06.html#an-elegant-new-orchid-is-found-hiding-in-plain-sight</link><description>It is extremely rare for a new plant species to be discovered in
+Japan, a nation where flora has been extensively studied and
+documented. Nevertheless, Professor Suetsugu Kenji and his
+associates have recently uncovered a stunning new species of orchid
+whose rosy pink petals bear a striking resemblance to glasswork.</description><pubDate>2024-01-29 16:49:28.800923</pubDate><guid isPermaLink="false">nenQsQldEvnYQsUtOTAYm5YoHIcdO6uvV02sq1oyw20=</guid></item><item><title>Demystifying Text Data with the unstructured Python Library</title><link>https://plurrrr.com/archive/2023/07/06.html#demystifying-text-data-with-the-unstructured-python-library</link><description>In the world of data, textual data stands out as being particularly
+complex. It doesnât fall into neat rows and columns like numerical
+data does. As a side project, Iâm in the process of developing my
+own personal AI assistant. The objective is to use the data within
+my notes and documents to answer my questions. The important benefit
+is all data processing will occure locally on my computer, ensuring
+that no documents are uploaded to the cloud, and my documents will
+remain private.
+To handle such unstructured data, Iâve found the unstructured
+Python library to be extremely useful. Itâs a flexible tool that
+works with various document formats, including Markdown, , XML, and
+HTML documents.</description><pubDate>2024-01-29 16:49:28.800929</pubDate><guid isPermaLink="false">17cxbSPxDXnlW83CFgrwOrYL2psVMaj9RLV-7dkqzos=</guid></item><item><title>Image Upscaling Using Neural Networks</title><link>https://plurrrr.com/archive/2023/07/06.html#image-upscaling-using-neural-networks</link><description>Do you remember those classic scenes from CSI TV series? When a
+detective, peering at a pixelated image from a surveillance camera,
+instructs the tech whiz, "zoom enhance". With some keyboard strokes,
+the blurry image transforms, revealing a perfectly clear license
+plate. We've all had a good laugh at that, dismissing it as pure
+Hollywood bullshit, right?</description><pubDate>2024-01-29 16:49:28.800936</pubDate><guid isPermaLink="false">YgsYWGM6TAfgz8Y3lY9aYuW15sMjJQXm5-YdYEOT-nQ=</guid></item><item><title>Regex engine internals as a library</title><link>https://plurrrr.com/archive/2023/07/05.html#regex-engine-internals-as-a-library</link><description>Over the last several years, Iâve rewritten Rustâs regex
+crate to enable better
+internal composition, and to make it easier to add optimizations
+while maintaining correctness. In the course of this rewrite I
+created a new crate,
+regex-automata,
+which exposes much of the regex crate internals as their own APIs
+for others to use. To my knowledge, this is the first regex library
+to expose its internals to the degree done in regex-automata as a
+separately versioned library.
+This blog post discusses the problems that led to the rewrite, how
+the rewrite solved them and a guided tour of regex-automataâs API.</description><pubDate>2024-01-29 16:49:28.800942</pubDate><guid isPermaLink="false">BKlCvBydoQqkL7XHZWdPxCwd_wVYnVKDNfTh6XYc8oo=</guid></item><item><title>Mastering Intermediate Linux Commands for Server Management</title><link>https://plurrrr.com/archive/2023/07/05.html#mastering-intermediate-linux-commands-for-server-management</link><description>As a sysadmin, you often come across complex tasks that require more
+than just basic commands. Thatâs why itâs important to learn some
+intermediate-level Linux commands that can make your work easier and
+more efficient.
+These commands can help you automate repetitive tasks, manage
+processes, and monitor system performance, among other things. In
+this article, we will explore some of these commands and their
+usage.</description><pubDate>2024-01-29 16:49:28.800948</pubDate><guid isPermaLink="false">W3Kw8Q3dX6g6jZrJWjxdDWCTN9neHoBAHam0ZDEONyg=</guid></item><item><title>Demystifying NixOS: The Basic Flake</title><link>https://plurrrr.com/archive/2023/07/05.html#demystifying-nixos:-the-basic-flake</link><description>In this opinionated series, my aim is to provide a structured path
+that takes you from a simple NixOS configuration to a more complex
+one, while explaining the underlying concepts along the way.</description><pubDate>2024-01-29 16:49:28.800954</pubDate><guid isPermaLink="false">M4LVi-xTMmsXTOhZxkVfEteNhLwYrB1gPaOGlb3FyDU=</guid></item><item><title>Most Tests Should Be Generated</title><link>https://plurrrr.com/archive/2023/07/04.html#most-tests-should-be-generated</link><description>Traditional testing wisdom eventually invokes the test pyramid,
+which is a guide to the proportion of tests to write along the
+isolation / integration spectrum. Thereâs an eternal debate about
+what the best proportion should be at each level, but interestingly
+itâs always presented with the assumption that test cases are
+hand-written. We should also think about test generation as a
+dimension, and if I were to draw a pyramid about it Iâd place
+generated tests on the bottom and hand-written scenarios on top,
+i.e. most tests should be generated.</description><pubDate>2024-01-29 16:49:28.800961</pubDate><guid isPermaLink="false">0qiJUNB6yH-vOreH7xIDK8Zt3s8unIhe4jaXaSWkD_g=</guid></item><item><title>Two Ways to Turbo-Charge tox</title><link>https://plurrrr.com/archive/2023/07/04.html#two-ways-to-turbo-charge-tox</link><description>The traditional way to speed up tox runs is running it as tox run-parallel (nÃ©e tox --parallel or just tox -p). And while
+itâs currently broken in tox
+4 for some users (yours
+truly included), itâs a great feature that Nox is sorely lacking.
+But there are more ways, and Iâd like to share two of them with
+you. Both methods donât make much difference in CIs like GitHub
+Actions (just like tox run-parallel, mind you!), but they can do
+wonders for your local development. Which is where I have the least
+patience, so letâs dive right in!</description><pubDate>2024-01-29 16:49:28.800967</pubDate><guid isPermaLink="false">Gx5zBQJj9rtkvH0qd8MBIPdvbq8-LN62MLRMvJUOcIA=</guid></item><item><title>Using git mailmap when names change</title><link>https://plurrrr.com/archive/2023/07/04.html#using-git-mailmap-when-names-change</link><description>People change their names for all sorts of reasons. They get
+married, they transition, or they just decide a different name
+better suits them. When this happens, things break. Recently I
+talked about how email address changes break
+things. Today
+it's how to fix this issue with git.</description><pubDate>2024-01-29 16:49:28.800972</pubDate><guid isPermaLink="false">PTpw8s6D0mngKswn1ZZSzv-bYOSm6LAfhHz3FWZFczM=</guid></item><item><title>Names should be as short as possible while still being clear</title><link>https://plurrrr.com/archive/2023/07/03.html#names-should-be-as-short-as-possible-while-still-being-clear</link><description>This mini-article is based on part of a
+talk I gave
+about Python API design, but I think the main point holds across
+programming languages.</description><pubDate>2024-01-29 16:49:28.800978</pubDate><guid isPermaLink="false">iCdj0GI4-Ac98EAQYw2nxLGJSIopY40n0VinhjUVF2k=</guid></item><item><title>Demystifying Pratt Parsers</title><link>https://plurrrr.com/archive/2023/07/03.html#demystifying-pratt-parsers</link><description>Pratt parsers are a beautiful way of solving the operator precedence problem:
+How can an expression like 1+2-3*4+5/6^7-8*9 be parsed to meet the
+expectations of your
+PEMDAS-trained
+brain? Where do you put the parentheses? What goes first?</description><pubDate>2024-01-29 16:49:28.800984</pubDate><guid isPermaLink="false">UkudlVSa0as--HQ0dpXqS1-13xZjM8BxIyV60NShxSo=</guid></item><item><title>How to think about async/await in Rust</title><link>https://plurrrr.com/archive/2023/07/03.html#how-to-think-about-async/await-in-rust</link><description>Some documentation of Rust async and await has presented it as a
+seamless alternative to threads. Just sprinkle these keywords
+through your code and get concurrency that scales better! I think
+this is very misleading. An async fn is a different thing from a
+normal Rust fn, and you need to think about different things to
+write correct code in each case.
+This post presents a different way of looking at async that I
+think is more useful, and less likely to lead to
+cancellation-related bugs.</description><pubDate>2024-01-29 16:49:28.800990</pubDate><guid isPermaLink="false">U9Oe4XYmDf4bW71jKFTIh93clp29Le3jZIptJMmQ8kc=</guid></item><item><title>Joins 13 Ways</title><link>https://plurrrr.com/archive/2023/07/03.html#joins-13-ways</link><description>Relational (inner) joins are really common in the world of
+databases, and one weird thing about them is that it seems like
+everyone has a different idea of what they are. In this post Iâve
+aggregated a bunch of different definitions, ways of thinking about
+them, and ways of implementing them that will hopefully be
+interesting. Theyâre not without redundancy, some of them are
+arguably the same, but I think theyâre all interesting perspectives
+nonetheless.</description><pubDate>2024-01-29 16:49:28.800996</pubDate><guid isPermaLink="false">-jMBXJ4OBiJ5ByfzdIjq5cw-3G7LM2k6f0I5UGRQ8dc=</guid></item><item><title>You Donât Need __all__</title><link>https://plurrrr.com/archive/2023/07/02.html#you-don%E2%80%99t-need-__all__</link><description>Every now and then, I get a PR from a well-meaning contributor
+trying to add __all__ to a Python module for whatever reason. I
+always decline these, they are unnecessary (at least for the way I
+structure my code) and I thought Iâd write a short post explaining
+why.</description><pubDate>2024-01-29 16:49:28.801001</pubDate><guid isPermaLink="false">Rlu5e0PJyU6gCi7r7HHLi6D-eweM8Fe68om15MRaSQw=</guid></item><item><title>Tree-Structured Concurrency</title><link>https://plurrrr.com/archive/2023/07/02.html#tree-structured-concurrency</link><description>In this post I want to provide you with a practical introduction to
+structured concurrency. I will do my best to explain what it is, why
+it's relevant, and how you can start applying it to your rust
+projects today. Structured concurrency is a lens I use in almost all
+of my reasoning about async Rust, and I think it might help others
+too.</description><pubDate>2024-01-29 16:49:28.801007</pubDate><guid isPermaLink="false">-2H_bq5VKAVGcd84MACgDBQJmEotRsIeJeegMODjeyI=</guid></item><item><title>Why I use the Twain web framework</title><link>https://plurrrr.com/archive/2023/07/02.html#why-i-use-the-twain-web-framework</link><description>Recently I've been using Twain for all of my newer web apps instead
+of Scotty and previously Spock, and I wanted to share why.</description><pubDate>2024-01-29 16:49:28.801013</pubDate><guid isPermaLink="false">LuOeyBDHN5GF4WDdlDW4smFePmZ0GIdDu01uNAcZxts=</guid></item><item><title>Cause of Death</title><link>https://plurrrr.com/archive/2023/07/02.html#cause-of-death</link><description>On a quiet day, away from the hustle of Richmond, in a small cottage
+on the Virginia coast, Dr. Kay Scarpetta receives a disturbing phone
+call from the Chesapeake police. Thirty feet deep in the murky
+waters of Virginia's Elizabeth River, a scuba diver's body is
+discovered near the Inactive Naval Shipyard.As the police begin
+searching for clues, the wallet of investigative reporter Ted
+Eddings is found.
+Unnerved by the possible identity of the victim, Scarpetta orders
+the crime scene roped off and left alone until she arrives. What was
+he doing there, searching for Civil War relics as the officer
+suggested, or was there a bigger story? As she rifles through the
+multitude of clues, a second murder hits much closer to home. This
+new development puts Scarpetta and her colleagues hot on the trail
+of a military conspiracy.</description><pubDate>2024-01-29 16:49:28.801019</pubDate><guid isPermaLink="false">2p9eVLrEnT592Nr7EH-9VyrvhyZWPKrjXXB07x0SM6E=</guid></item><item><title>From Potter's Field: Good</title><link>https://plurrrr.com/archive/2023/07/01.html#from-potter's-field:-good</link><description /><pubDate>2024-01-29 16:49:28.801025</pubDate><guid isPermaLink="false">MbstYVKCjqxZ57aNiB0MdXfm28Wvnk_uJj4g_TIRRH8=</guid></item><item><title>My git worfklow</title><link>https://plurrrr.com/archive/2023/07/01.html#my-git-worfklow</link><description>Every now and then, at work, I find myself discussing git worfklows,
+commit messages, branching, releasing, versioning, changelogs
+etc. Since my opinion has remained fairly consistent for the past
+few years, I found myself repeating the same points a lot, so I
+wrote it down. This page is the resulting compilation of my opinions
+on the software development lifecycle (SDLC), without
+workplace-specific tangeants.</description><pubDate>2024-01-29 16:49:28.801031</pubDate><guid isPermaLink="false">uwDjNt27H9XhlyOAguT8JS_ffsWAZX5CaCZwc0AdNgg=</guid></item><item><title>Adventures in building a Go container with Nix</title><link>https://plurrrr.com/archive/2023/07/01.html#adventures-in-building-a-go-container-with-nix</link><description>Iâd like to preface this article by saying that it is not an
+authoritative guide, rather it is just me documenting my experience
+figuring various things out, in the hope that itâll be useful or
+interesting to someone else. I assume some knowledge of Nix and
+containerization throughout this article.</description><pubDate>2024-01-29 16:49:28.801038</pubDate><guid isPermaLink="false">tdpCASJc0ye3ctnN1YoDzeDM5LZTf_jnO2e58dWJ2FE=</guid></item><item><title>For Python packages, file structure != API</title><link>https://plurrrr.com/archive/2023/06/30.html#for-python-packages,-file-structure-!=-api</link><description>When youâre creating a Python package, one of the nice things is
+that you can just add a .py source file to the package directory,
+and then users can import it right away.</description><pubDate>2024-01-29 16:49:28.801044</pubDate><guid isPermaLink="false">vMBu9hlUBL4wb2v3STpCLBFw1rQBXtyKMAZ-3ymmeWo=</guid></item><item><title>Static electricity attracts ticks to hosts</title><link>https://plurrrr.com/archive/2023/06/30.html#static-electricity-attracts-ticks-to-hosts</link><description>Ticks can be attracted across air gaps several times larger than
+themselves by the static electricity that their hosts naturally
+accumulate, researchers at the University of Bristol have
+discovered.</description><pubDate>2024-01-29 16:49:28.801050</pubDate><guid isPermaLink="false">ASOe8waaNKT6IoENYJuJCtd1CDjtbW62tJZaikZ-Xf4=</guid></item><item><title>The Python GIL: Past, Present, and Future</title><link>https://plurrrr.com/archive/2023/06/30.html#the-python-gil:-past,-present,-and-future</link><description>Our team had some fun experimenting with Python 3.9-nogil, the
+results of which will be reported in an upcoming blog post. In the
+meantime, we saw an opportunity to dive deeper into the history of
+the global interpreter lock (GIL), including why it makes Python so
+easy to integrate with and the tradeoff between ease and
+performance.</description><pubDate>2024-01-29 16:49:28.801108</pubDate><guid isPermaLink="false">zsZdoLZU33g0FoBlJqZ8WNiEfxTlvLi9m25Vrxqm8d8=</guid></item><item><title>Automating Command Execution Across All Tmux Panes</title><link>https://plurrrr.com/archive/2023/06/30.html#automating-command-execution-across-all-tmux-panes</link><description>As developers, we often find ourselves working in multiple tmux
+panes, each running different applications or instances of the same
+application. When we make changes to a configuration file, such as
+~/.vimrc for Vim or ~/.aliases for our shell, we need to
+manually reload that configuration in each relevant instance. This
+can be a time-consuming process, especially when working with a
+large number of panes. But also, let's be wizards and automate this
+process!
+In this post, we'll explore a simple automation that can save you a
+lot of time and effort. We'll focus on a specific use case â
+reloading a .vimrc file across all Vim instances in tmux panes â
+but the pattern can be applied to a variety of scenarios.</description><pubDate>2024-01-29 16:49:28.801114</pubDate><guid isPermaLink="false">VjfqKMn-FEO3SMQ8ZHUxgGvya_UeQop0pMXWdHSLO6c=</guid></item><item><title>NixOS and my Descent into Insanity</title><link>https://plurrrr.com/archive/2023/06/29.html#nixos-and-my-descent-into-insanity</link><description>As I tend to do, I picked a topic to write about that is much larger
+in scope than I could manage in a reasonable amount of time. Did I
+learn? Apparently not. This article started off with switching from
+zsh to
+fish. Then I thought, "Might as well
+manage it all with Nix!", which led me to switch to home
+manager to manage
+my dotfiles which led me to using Nix everywhere I possibly could.
+As expected, using Nix where it's not supported caused some
+issues. Buckle up, and watch my slow descent into madness (Nix).</description><pubDate>2024-01-29 16:49:28.801120</pubDate><guid isPermaLink="false">LHwIvkhdxSAHeQ1GSet4B-7VG4B3bXvVKtjdD8P0NwQ=</guid></item><item><title>CLI tools hidden in the Python standard library</title><link>https://plurrrr.com/archive/2023/06/29.html#cli-tools-hidden-in-the-python-standard-library</link><description /><pubDate>2024-01-29 16:49:28.801126</pubDate><guid isPermaLink="false">kSWWJxBRDEiKy2r6AWIfmgKcxlDiwhBMg4t0p98QdHo=</guid></item><item><title>Practical Procedural Macros</title><link>https://plurrrr.com/archive/2023/06/29.html#practical-procedural-macros</link><description>An explaination of how to implement practical procedural macros in
+the Rust programming
+language. Explains the different types of macros, then shows an
+implementation of a procedural macro following best practices,
+focusing on testing and ergonomics. Assumes some familiarity with
+Rust.</description><pubDate>2024-01-29 16:49:28.801131</pubDate><guid isPermaLink="false">Q9I53dst5BsZC6CMr2qyLwVIquUeinf3r8O1vE0GMas=</guid></item><item><title>Rust fact vs. fiction: 5 Insights from Google's Rust journey</title><link>https://plurrrr.com/archive/2023/06/28.html#rust-fact-vs.-fiction:-5-insights-from-google's-rust-journey</link><description>In this post, we will analyze some data covering years of early
+adoption of Rust here at Google. At Google, we have been seeing
+increased Rust
+adoption,
+especially in our consumer applications and platforms. Pulling from
+the over 1,000 Google developers who have authored and committed
+Rust code as some part of their work in 2022, weâll address some
+rumors head-on, both confirming some issues that could be improved
+and sharing some enlightening discoveries we have made along the
+way.</description><pubDate>2024-01-29 16:49:28.801148</pubDate><guid isPermaLink="false">hjTjXabz4wTz8tQmVtM2iZjFKSbjQbXzFWapEKqyPak=</guid></item><item><title>FreeBSD Jails Containers</title><link>https://plurrrr.com/archive/2023/06/28.html#freebsd-jails-containers</link><description>FreeBSD networking and containers (Jails) stacks are very mature and
+provide lots of useful features â¦ yet for some reason these features
+are not properly advertised by the FreeBSD project â¦ or not even
+documented at all.</description><pubDate>2024-01-29 16:49:28.801155</pubDate><guid isPermaLink="false">uGw-ZASLgYrSV69NJvUrSDO69FFS0GNnZkLByrjtBTU=</guid></item><item><title>Is ORM still an 'anti pattern'?</title><link>https://plurrrr.com/archive/2023/06/28.html#is-orm-still-an-'anti-pattern'?</link><description>ORMs are one of those things that software writers like to pick
+on. There are many online articles that go by the same tune: âORMs
+are an anti-pattern. They are a toy for startups, but eventually
+hurt more than help.â
+This is an exaggeration. ORMs arenât bad. Are they perfect?
+Definitely not, just like anything else in software. At the same
+time, the criticisms are expectedâtwo years ago, I wouldâve agreed
+with that stereotyped headline wholeheartedly. Iâve had my share of
+âWhat do you mean the ORM ran the server out of memory?â incidents.
+But in reality, ORMs are more misused than overused.</description><pubDate>2024-01-29 16:49:28.801160</pubDate><guid isPermaLink="false">w-TU2ZdGDP0yyuim1TVACXDEQ3STHic-uf5Ofjc6AE4=</guid></item><item><title>When NumPy is too slow</title><link>https://plurrrr.com/archive/2023/06/28.html#when-numpy-is-too-slow</link><description>If youâre doing numeric calculations, NumPy is a lot faster than
+than plain Pythonâbut sometimes thatâs not enough. What should you
+do when your NumPy-based code is too slow?
+Your first thought might be parallelism, but that should probably be
+the last thing you consider. There are many speedups you can do
+before parallelism becomes helpful, from algorithmic improvements to
+working around NumPyâs architectural limitations.
+Letâs see why NumPy can be slow, and then some solutions to help
+speed up your code even more.</description><pubDate>2024-01-29 16:49:28.801167</pubDate><guid isPermaLink="false">s0syhHTwX3PIgVetP62mHtbgIW71kMLIgXCZVzPweXo=</guid></item><item><title>Authlib: Python Authentication</title><link>https://plurrrr.com/archive/2023/06/27.html#authlib:-python-authentication</link><description>The ultimate Python library in building OAuth and OpenID Connect
+servers. It is designed from low level specifications
+implementations to high level frameworks integrations, to meet the
+needs of everyone.</description><pubDate>2024-01-29 16:49:28.801172</pubDate><guid isPermaLink="false">8g9BS_L8xfc1T6O03MoySor0CLC3nzLe8tYb8aQ6cb4=</guid></item><item><title>The self-supervised learning cookbook</title><link>https://plurrrr.com/archive/2023/06/27.html#the-self-supervised-learning-cookbook</link><description>We have released a new "Cookbook of Self-Supervised
+Learning,â a practical guide for
+AI researchers and practitioners on how to navigate SSL recipes,
+understand its various knobs and levers, and gain the know-how
+needed to experiment with SSL's untapped flavors. This is part of
+our efforts to lower the barrier and help democratize access to SSL
+research. Youâll also find tips and tricks from more than a dozen
+authors across multiple universities, including New York University,
+University of Maryland, UC Davis, University of Montreal; as well as
+leading Meta AI researchers, such as Yann LeCun.</description><pubDate>2024-01-29 16:49:28.801178</pubDate><guid isPermaLink="false">MiiXnMarainUMvJjzG8SB6EXhFWv0nNgACIGYGEfc5I=</guid></item><item><title>Welcome to Codon</title><link>https://plurrrr.com/archive/2023/06/27.html#welcome-to-codon</link><description>Codon is a high-performance Python compiler that compiles Python
+code to native machine code without any runtime overhead. Typical
+speedups over Python are on the order of 100x or more, on a single
+thread. Codon supports native multithreading which can lead to
+speedups many times higher still.
+The Codon framework is fully modular and extensible, allowing for
+the seamless integration of new modules, compiler optimizations,
+domain-specific languages and so on. We actively develop Codon
+extensions for a number of domains such as bioinformatics and
+quantitative finance.</description><pubDate>2024-01-29 16:49:28.801184</pubDate><guid isPermaLink="false">q3xiiHVqsY9P6Ig5-GBfFvrgCj7AiYMt86al2oE_m98=</guid></item><item><title>Advanced macOS Command-Line Tools</title><link>https://plurrrr.com/archive/2023/06/27.html#advanced-macos-command-line-tools</link><description>macOS is fortunate to have access to the huge arsenal of standard
+Unix tools. There are also a good number of macOS-specific
+command-line utilities that provide unique macOS functionality. To
+view the full documentation for any of these commands, run man &lt;command&gt;.</description><pubDate>2024-01-29 16:49:28.801189</pubDate><guid isPermaLink="false">6ZZ9EZbTOW-lh0q3_ss52cR2YtTqaLE39uSJmc2jEYc=</guid></item><item><title>From Potter's Field</title><link>https://plurrrr.com/archive/2023/06/26.html#from-potter's-field</link><description>An unidentified nude female sits propped against a fountain in
+Central Park. There are no signs of struggle. When Dr. Kay Scarpetta
+and her colleagues Benton Wesley and Pete Marino arrive on the
+scene, they instantly recognize the signature of serial killer
+Temple Brooks Gault. Scarpetta, on assignment with the FBI, visits
+the New York City morgue on Christmas morning, where she must use
+her forensic expertise to give a name to the namelessâa difficult
+task. But as she sorts through conflicting forensic clues, Gault
+claims his next victim. He has infiltrated the FBIâs top secret
+artificial-intelligence system developed by Scarpettaâs niece, and
+sends taunting messages as his butchery continues, moving
+terrifyingly closer to Scarpetta herself.</description><pubDate>2024-01-29 16:49:28.801195</pubDate><guid isPermaLink="false">Rvv6Qc-t0Ddf5u8lcf5Gyie0iReEbRJEKeNL_bbPGtE=</guid></item><item><title>An Introduction to Parser Combinators</title><link>https://plurrrr.com/archive/2023/06/26.html#an-introduction-to-parser-combinators</link><description>If youâve ever had to write a parser before, you know that creating
+parsers can be a tedious and complicated process. The good news is
+that it doesnât have to be this way. In this post, Iâm going to
+introduce parser combinators - a technique for building parsers
+that Iâve found to be both practical and fun to play around
+with1.</description><pubDate>2024-01-29 16:49:28.801201</pubDate><guid isPermaLink="false">jPBYhFIf5kTzoOC34RxrHRx7y7Xw11LZnCl-wM6YxQ4=</guid></item><item><title>Gitflow and GitHub Flow compared: Which one is better?</title><link>https://plurrrr.com/archive/2023/06/26.html#gitflow-and-github-flow-compared:-which-one-is-better?</link><description>Gitflow is, by far, the most popular branching model and possibly
+the one that has endured the test of time the most. Introduced by
+Vincent Driessen in
+2010,
+its fundamental idea is that you should isolate your work into
+different types of git branches.
+Other branching strategies, such as the centralized workflow (for
+those teams that come from SVN), and the forking workflow (for
+open-source projects) exist. Git, as a version control system, only
+details basic branching operations, and it remains controversial as
+to which approach is the best. Beyond those basic branching
+operations, it's a matter of opinion.</description><pubDate>2024-01-29 16:49:28.801207</pubDate><guid isPermaLink="false">vnJQPlz-gdMScbt03O9EwYOZ7jBoRGLngWEuBCqCvDw=</guid></item><item><title>Raku is pretty damn Cool</title><link>https://plurrrr.com/archive/2023/06/25.html#raku-is-pretty-damn-cool</link><description>The first time, I've heard of Raku was
+maybe a year ago. I was too busy to look into it though. I've done
+that now and BOY OH BOY, do I like this language.</description><pubDate>2024-01-29 16:49:28.801212</pubDate><guid isPermaLink="false">JoYCgWRjVo0Y8Gh4Zm0fjVeI4DAcu8qVu5Pi_JGTuqQ=</guid></item><item><title>What is SKIP LOCKED for in PostgreSQL 9.5?</title><link>https://plurrrr.com/archive/2023/06/25.html#what-is-skip-locked-for-in-postgresql-9.5?</link><description>PostgreSQL 9.5 introduces a new SKIP LOCKED option to SELECT ... FOR
+[KEY] UPDATE|SHARE. Itâs used in the same place as NOWAIT and, like
+NOWAIT, affects behaviour when the tuple is locked by another
+transaction.
+The main utility of SKIP LOCKED is for building simple, reliable and
+efficient concurrent work queues.</description><pubDate>2024-01-29 16:49:28.801218</pubDate><guid isPermaLink="false">cRJoyvb_Sw_PfnVRdAG-wyAuLzqHkmW1j2UwNFXeeeM=</guid></item><item><title>Completely purge files from a git repository</title><link>https://plurrrr.com/archive/2023/06/25.html#completely-purge-files-from-a-git-repository</link><description>I have occasionally ended up with files I did not want in my git
+repositories. These can both take up a lot of space, and contain
+sensitive data that we just want to remove (such as MySQL dumps,
+deploy keys etc).
+Git keeps a history of all files, so just deleting the file doesnât
+âmake it go awayâ. The only way to completely remove the file is to
+scan through all history, removing all references to (and history
+of) those files, and finally pruning the git repo (physically
+removing references to what we just deleted). Finally you have to
+force-push the repo changes back to the remote, overwriting the
+remote.</description><pubDate>2024-01-29 16:49:28.801224</pubDate><guid isPermaLink="false">-DpH-NFTYcSkvzdKr--2-IjR7oUbZpYF54C8Syp_SoU=</guid></item><item><title>The Body Farm: Good</title><link>https://plurrrr.com/archive/2023/06/24.html#the-body-farm:-good</link><description /><pubDate>2024-01-29 16:49:28.801229</pubDate><guid isPermaLink="false">CAdpQeiqZ7Xqk_0moRMvimzWkK0LZlm5ofQr5zFAYzU=</guid></item><item><title>CSS only dark mode without JS</title><link>https://plurrrr.com/archive/2023/06/24.html#css-only-dark-mode-without-js</link><description>Last week I implemented dark mode on my website, without using any
+JS and only modern CSS media queries.</description><pubDate>2024-01-29 16:49:28.801235</pubDate><guid isPermaLink="false">m-Omixn2H1rL6c_yoQQPG1RZoa-nrgTMN0TtBUTrVn8=</guid></item><item><title>Big O Notation: A Simple Explanation With Examples</title><link>https://plurrrr.com/archive/2023/06/24.html#big-o-notation:-a-simple-explanation-with-examples</link><description>Itâs hard to create efficient algorithms without understanding the
+time and space complexity of various operations. The concept of Big
+O notation helps programmers understand how quickly or slowly an
+algorithm will execute as the input size grows.
+In this article, weâll cover the basics of Big O notation, why it is
+used and how describe the time and space complexity of algorithms
+with example.</description><pubDate>2024-01-29 16:49:28.801241</pubDate><guid isPermaLink="false">qGAsjOauSlKMKuQm2G4JRioqjGU3XkSc6flN3zhlyIk=</guid></item><item><title>Clearing up some misconceptions about Passkeys</title><link>https://plurrrr.com/archive/2023/06/24.html#clearing-up-some-misconceptions-about-passkeys</link><description>I am unreasonably excited about
+passkeys, Iâve
+long been looking
+for a better/more convenient way than passwords to do
+authentication, and I think passkeys are finally it.
+However, whenever I see passkeys mentioned (for example on the
+recent Tailscale post about
+them), there are always a lot of misconceptions that surface in the
+debate. Iâd like to clear some of them here, and hopefully explain a
+bit better what passkeys are.</description><pubDate>2024-01-29 16:49:28.801253</pubDate><guid isPermaLink="false">ela3f9nZkdwTZBgV6rUOyk3aK7ix_DO1Fh3ToedpNjc=</guid></item><item><title>The Bubble (2022)</title><link>https://plurrrr.com/archive/2023/06/24.html#the-bubble-(2022)</link><description>A group of actors and actresses stuck inside a pandemic bubble at a
+hotel attempt to complete a film.</description><pubDate>2024-01-29 16:49:28.801258</pubDate><guid isPermaLink="false">-dWmpGhLjxyZmhRqgeoHHFfYxXfmqvf-S7_VEsmQVDY=</guid></item></channel></rss>
